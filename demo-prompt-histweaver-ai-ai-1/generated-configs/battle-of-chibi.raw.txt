@@ -1,0 +1,1424 @@
+{
+  "id": "battle_of_chibi",
+  "title": "赤壁之战",
+  "period": "东汉建安十三年（208年）",
+  "intro": "曹操统一北方后率大军南下，意图吞并江东。孙刘联盟在赤壁以火攻大破曹军，奠定三国鼎立格局。",
+  "theme": "联盟与背叛、智谋与勇气",
+  "assets": {
+    "coverImage": "",
+    "defaultBackground": "",
+    "sceneBackgrounds": {},
+    "portraits": {},
+    "endingBackgrounds": {}
+  },
+  "timeline": [
+    {
+      "id": "timeline_1",
+      "year": "208年七月",
+      "title": "曹操南征",
+      "description": "曹操率二十万大军南下，刘表病死，刘琮投降，荆州落入曹操之手。",
+      "location": "荆州",
+      "importance": 5
+    },
+    {
+      "id": "timeline_2",
+      "year": "208年九月",
+      "title": "长坂坡之战",
+      "description": "刘备败走当阳，赵云救主，张飞据水断桥，刘备退往江夏。",
+      "location": "当阳",
+      "importance": 4
+    },
+    {
+      "id": "timeline_3",
+      "year": "208年十月",
+      "title": "孙刘结盟",
+      "description": "诸葛亮出使东吴，周瑜主战，孙权决意抗曹，孙刘联盟正式形成。",
+      "location": "柴桑",
+      "importance": 5
+    },
+    {
+      "id": "timeline_4",
+      "year": "208年十一月",
+      "title": "赤壁火攻",
+      "description": "黄盖诈降，东南风起，火船冲入曹军水寨，曹军大败。",
+      "location": "赤壁",
+      "importance": 5
+    },
+    {
+      "id": "timeline_5",
+      "year": "208年十二月",
+      "title": "华容道",
+      "description": "曹操败走华容道，关羽义释曹操，三国鼎立之势初成。",
+      "location": "华容",
+      "importance": 4
+    }
+  ],
+  "roles": [
+    {
+      "id": "role_zhuge",
+      "name": "诸葛亮",
+      "identity": "刘备军师",
+      "goal": "促成孙刘联盟，击败曹操",
+      "dilemma": "东吴内部主战主和分歧严重，需说服孙权",
+      "visibleInfo": "曹操大军压境，荆州已失",
+      "hiddenMotivation": "借东吴之力保全刘备，为日后取益州创造条件",
+      "portraitImage": "",
+      "initialStateModifiers": {
+        "alliance_trust": 60
+      },
+      "playableNodeIds": [
+        "node_alliance",
+        "node_borrow_arrow"
+      ],
+      "routeDescription": "外交路线，主导联盟谈判与战略谋划"
+    },
+    {
+      "id": "role_zhouyu",
+      "name": "周瑜",
+      "identity": "东吴大都督",
+      "goal": "击退曹军，保全江东基业",
+      "dilemma": "兵力悬殊，需用奇谋；与诸葛亮暗中较量",
+      "visibleInfo": "曹军不习水战，但兵力十倍于我",
+      "hiddenMotivation": "既要破曹，又要压制刘备势力扩张",
+      "portraitImage": "",
+      "initialStateModifiers": {
+        "wu_morale": 70
+      },
+      "playableNodeIds": [
+        "node_borrow_arrow",
+        "node_fire_attack"
+      ],
+      "routeDescription": "军事路线，主导火攻计划与战场指挥"
+    },
+    {
+      "id": "role_huanggai",
+      "name": "黄盖",
+      "identity": "东吴老将",
+      "goal": "献诈降计，实施火攻",
+      "dilemma": "需受苦肉计取信曹操，生死未卜",
+      "visibleInfo": "曹军战船首尾相连，火攻可破",
+      "hiddenMotivation": "年迈立功，为东吴尽最后一份力",
+      "portraitImage": "",
+      "initialStateModifiers": {
+        "fire_preparation": 40
+      },
+      "playableNodeIds": [
+        "node_sacrifice",
+        "node_final_battle"
+      ],
+      "routeDescription": "行动路线，执行苦肉计与火攻突击"
+    },
+    {
+      "id": "role_lusu",
+      "name": "鲁肃",
+      "identity": "东吴谋士",
+      "goal": "协调孙刘联盟，维持双方信任",
+      "dilemma": "周瑜与诸葛亮暗中较劲，需居中调停",
+      "visibleInfo": "联盟是破曹唯一希望",
+      "hiddenMotivation": "促成联盟后推动借荆州给刘备，共同抗曹",
+      "portraitImage": "",
+      "initialStateModifiers": {
+        "alliance_trust": 50
+      },
+      "playableNodeIds": [
+        "node_alliance",
+        "node_fire_attack"
+      ],
+      "routeDescription": "协调路线，维护联盟稳定与信息传递"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "npc_caocao",
+      "name": "曹操",
+      "identity": "曹魏丞相",
+      "globalStance": "志在统一天下，轻视孙刘联军",
+      "personality": "雄才大略，多疑自负",
+      "knowledgeBoundary": "不知火攻计划，怀疑黄盖诈降但未深究",
+      "portraitImage": "",
+      "promptProfileKey": "caocao_profile"
+    },
+    {
+      "id": "npc_sunquan",
+      "name": "孙权",
+      "identity": "东吴之主",
+      "globalStance": "犹豫不决，最终主战",
+      "personality": "审时度势，善于用人",
+      "knowledgeBoundary": "知晓联盟重要性，不知前线具体战术",
+      "portraitImage": "",
+      "promptProfileKey": "sunquan_profile"
+    },
+    {
+      "id": "npc_liubei",
+      "name": "刘备",
+      "identity": "荆州牧",
+      "globalStance": "依附东吴，寻求生存",
+      "personality": "仁德宽厚，善于隐忍",
+      "knowledgeBoundary": "信任诸葛亮，不知东吴内部博弈",
+      "portraitImage": "",
+      "promptProfileKey": "liubei_profile"
+    },
+    {
+      "id": "npc_pangtong",
+      "name": "庞统",
+      "identity": "凤雏先生",
+      "globalStance": "暗中助曹军连环计失败",
+      "personality": "才华横溢，行事诡秘",
+      "knowledgeBoundary": "知晓连环计弊端，不知火攻具体时机",
+      "portraitImage": "",
+      "promptProfileKey": "pangtong_profile"
+    },
+    {
+      "id": "npc_jianggan",
+      "name": "蒋干",
+      "identity": "曹操谋士",
+      "globalStance": "自告奋勇劝降周瑜",
+      "personality": "自作聪明，易被利用",
+      "knowledgeBoundary": "被周瑜反间计蒙蔽，不知蔡瑁被冤杀真相",
+      "portraitImage": "",
+      "promptProfileKey": "jianggan_profile"
+    },
+    {
+      "id": "npc_caimao",
+      "name": "蔡瑁",
+      "identity": "曹军水军都督",
+      "globalStance": "忠于曹操，精通水战",
+      "personality": "谨慎务实，深谙水军",
+      "knowledgeBoundary": "知晓曹军水战弱点，不知将被反间计所害",
+      "portraitImage": "",
+      "promptProfileKey": "caimao_profile"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node_alliance",
+      "title": "联盟谈判",
+      "year": "208年十月",
+      "location": "柴桑",
+      "background": "曹操大军压境，东吴内部主战主和争执不下，诸葛亮出使东吴。",
+      "conflict": "张昭等主和派力劝孙权投降，周瑜主战但需说服孙权。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "role_zhuge",
+        "role_lusu"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "npc_sunquan",
+          "stanceInThisNode": "犹豫不决，权衡投降与抗曹的利弊。",
+          "knowledgeInThisNode": "知道曹操兵力雄厚，不知诸葛亮真实意图。",
+          "relationshipToPlayerRole": {
+            "role_zhuge": "警惕其才华，需被说服",
+            "role_lusu": "信任其判断，等待建议"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "role_zhuge": [
+              "主公如何看待曹操大军？",
+              "东吴可有能力一战？"
+            ],
+            "role_lusu": [
+              "主公心中有何顾虑？",
+              "周都督意下如何？"
+            ]
+          }
+        },
+        {
+          "npcId": "npc_liubei",
+          "stanceInThisNode": "焦急等待谈判结果，希望联盟成功。",
+          "knowledgeInThisNode": "知道诸葛亮出使，不知东吴内部博弈详情。",
+          "relationshipToPlayerRole": {
+            "role_zhuge": "完全信任，寄予厚望",
+            "role_lusu": "感激其促成联盟的努力"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "role_zhuge": [
+              "主公对联盟有何期望？",
+              "若联盟不成当如何？"
+            ],
+            "role_lusu": [
+              "刘皇叔兵力尚存多少？",
+              "贵军能提供何种支援？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "role_zhuge": [
+          {
+            "id": "script_zhuge_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "你来到柴桑，张昭等人已在殿上，气氛紧张。"
+          },
+          {
+            "id": "script_zhuge_2",
+            "type": "dialogue",
+            "speakerName": "张昭",
+            "text": "曹操百万大军压境，先生以为刘备能抵挡？"
+          }
+        ],
+        "role_lusu": [
+          {
+            "id": "script_lusu_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "你暗中观察局势，周瑜即将归来。"
+          },
+          {
+            "id": "script_lusu_2",
+            "type": "dialogue",
+            "speakerName": "孙权",
+            "text": "鲁肃，你意下如何？是战是降？"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_zhuge_1",
+          "text": "舌战群儒，以理服人",
+          "description": "用智谋驳倒主和派，展现联盟价值。",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_zhuge"
+          ],
+          "stateEffects": {
+            "alliance_trust": 15,
+            "wu_morale": 5
+          },
+          "nextNodeId": "node_borrow_arrow",
+          "randomEventId": "",
+          "historicalExplanation": "诸葛亮以雄辩之才驳倒张昭等人，奠定联盟基础。",
+          "resultScript": [
+            {
+              "id": "result_zhuge_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "你的辩才令众人哑口无言，孙权暗自点头。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zhuge_2",
+          "text": "激将孙权，促其决断",
+          "description": "用激将法迫使孙权表态抗曹。",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_zhuge"
+          ],
+          "stateEffects": {
+            "alliance_trust": 10,
+            "wu_morale": 10
+          },
+          "nextNodeId": "node_borrow_arrow",
+          "randomEventId": "",
+          "historicalExplanation": "诸葛亮以曹操欲夺二乔激怒孙权，坚定其抗曹之心。",
+          "resultScript": [
+            {
+              "id": "result_zhuge_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "孙权拔剑斩案，誓与曹操决一死战。"
+            }
+          ]
+        },
+        {
+          "id": "decision_lusu_1",
+          "text": "力劝孙权，陈述利害",
+          "description": "以诚意打动孙权，分析投降后果。",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_lusu"
+          ],
+          "stateEffects": {
+            "alliance_trust": 10,
+            "wu_morale": 5
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "鲁肃私下劝孙权不可听信主和派，应联合刘备。",
+          "resultScript": [
+            {
+              "id": "result_lusu_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "孙权沉思良久，终于下定决心抗曹。"
+            }
+          ]
+        },
+        {
+          "id": "decision_lusu_2",
+          "text": "请周瑜速归，主持大局",
+          "description": "请周瑜回来主持军事，增强主战派力量。",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_lusu"
+          ],
+          "stateEffects": {
+            "alliance_trust": 5,
+            "wu_morale": 15
+          },
+          "nextNodeId": "node_fire_attack",
+          "randomEventId": "",
+          "historicalExplanation": "鲁肃建议召回周瑜，周瑜归来后力主抗曹。",
+          "resultScript": [
+            {
+              "id": "result_lusu_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "周瑜星夜赶回，主战声势大振。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "role_zhuge": {
+          "currentSituation": "曹操大军南下，荆州已失，刘备退守江夏。",
+          "informationConflict": "东吴主和派占据上风，孙权举棋不定。",
+          "playerPressure": "若联盟失败，刘备将无立足之地。",
+          "inquiryPurpose": "了解孙权真实想法，寻找突破口。",
+          "playerSituation": "孤身出使，无兵马后盾。",
+          "decisionPressure": "必须今日说服孙权，否则大势已去。",
+          "stakes": "联盟成败决定刘备存亡与天下格局。"
+        },
+        "role_lusu": {
+          "currentSituation": "东吴内部意见分歧，孙权难以决断。",
+          "informationConflict": "周瑜未归，主和派声音甚嚣尘上。",
+          "playerPressure": "联盟若不成，东吴也将面临灭顶之灾。",
+          "inquiryPurpose": "探明孙权底线，协调各方立场。",
+          "playerSituation": "夹在周瑜与诸葛亮之间，需小心平衡。",
+          "decisionPressure": "必须在周瑜归来前稳住局势。",
+          "stakes": "联盟稳定关系东吴存亡与荆州归属。"
+        }
+      },
+      "shortContext": "诸葛亮舌战群儒，鲁肃居中调停。",
+      "detailedContext": "诸葛亮需在柴桑说服孙权抗曹，面对张昭等主和派质疑，鲁肃暗中协助。",
+      "glossary": [
+        {
+          "term": "舌战群儒",
+          "explanation": "诸葛亮以口才驳倒东吴主和派文臣。"
+        },
+        {
+          "term": "柴桑",
+          "explanation": "东吴重镇，孙权驻地，今江西九江。"
+        }
+      ]
+    },
+    {
+      "id": "node_borrow_arrow",
+      "title": "草船借箭",
+      "year": "208年十月",
+      "location": "长江",
+      "background": "周瑜刁难诸葛亮，命其三日内造十万支箭。",
+      "conflict": "周瑜欲借机除掉诸葛亮，诸葛亮需化解危机。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "role_zhuge",
+        "role_zhouyu"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "npc_caocao",
+          "stanceInThisNode": "警惕江上动静，但轻视敌军实力",
+          "knowledgeInThisNode": "不知草船之计，以为敌军趁雾偷袭",
+          "relationshipToPlayerRole": {
+            "role_zhuge": "敌军军师，欲除之而后快",
+            "role_zhouyu": "东吴大都督，心腹大患"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "role_zhuge": [
+              "曹军水军部署如何？",
+              "丞相如何看待江东？"
+            ],
+            "role_zhouyu": [
+              "曹军虚实如何？",
+              "丞相有何破绽？"
+            ]
+          }
+        },
+        {
+          "npcId": "npc_caimao",
+          "stanceInThisNode": "谨慎应对，建议放箭退敌",
+          "knowledgeInThisNode": "知晓水战要领，但不知草船之计",
+          "relationshipToPlayerRole": {
+            "role_zhuge": "不熟悉的敌军谋士",
+            "role_zhouyu": "东吴将领，敌对关系"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "role_zhuge": [
+              "水战要领是什么？",
+              "曹军水军有何弱点？"
+            ],
+            "role_zhouyu": [
+              "如何识破敌军计谋？",
+              "水军布防如何？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "role_zhuge": [
+          {
+            "id": "script_zhuge_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "大雾弥漫江面，诸葛亮命二十只草船逼近曹营。"
+          },
+          {
+            "id": "script_zhuge_2",
+            "type": "dialogue",
+            "speakerName": "诸葛亮",
+            "text": "周公瑾欲借造箭除我，我偏要借箭破局。"
+          }
+        ],
+        "role_zhouyu": [
+          {
+            "id": "script_zhouyu_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "周瑜在帐中等待消息，盼诸葛亮无法交差。"
+          },
+          {
+            "id": "script_zhouyu_2",
+            "type": "dialogue",
+            "speakerName": "周瑜",
+            "text": "三日之期将至，看他如何交出十万支箭。"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_zhuge_1",
+          "text": "趁大雾以草船诱敌射箭",
+          "description": "利用天气和曹军多疑，智取箭矢",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_zhuge"
+          ],
+          "stateEffects": {
+            "alliance_trust": 5,
+            "battle_advantage": 10
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "正史记载诸葛亮利用大雾，以草船借箭十万",
+          "resultScript": [
+            {
+              "id": "result_zhuge_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "曹军万箭齐发，草船满载而归，周瑜大惊。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zhuge_2",
+          "text": "向鲁肃求助拖延期限",
+          "description": "寻求盟友帮助，争取时间",
+          "type": "alternative",
+          "allowedRoleIds": [
+            "role_zhuge"
+          ],
+          "stateEffects": {
+            "alliance_trust": -5,
+            "wu_morale": 5
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "若诸葛亮示弱求助，可能影响联盟地位",
+          "resultScript": [
+            {
+              "id": "result_zhuge_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "鲁肃出面周旋，周瑜勉强同意延期。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zhouyu_1",
+          "text": "静观其变，看诸葛亮如何应对",
+          "description": "保持压力，等待诸葛亮失败",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_zhouyu"
+          ],
+          "stateEffects": {
+            "alliance_trust": -5,
+            "wu_morale": 5
+          },
+          "nextNodeId": "node_fire_attack",
+          "randomEventId": "",
+          "historicalExplanation": "周瑜本欲借机除掉诸葛亮，但被其智谋化解",
+          "resultScript": [
+            {
+              "id": "result_zhouyu_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "周瑜按兵不动，静待诸葛亮交不出箭。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zhouyu_2",
+          "text": "暗中派人破坏诸葛亮计划",
+          "description": "主动出击，确保诸葛亮失败",
+          "type": "alternative",
+          "allowedRoleIds": [
+            "role_zhouyu"
+          ],
+          "stateEffects": {
+            "alliance_trust": -15,
+            "wu_morale": 10
+          },
+          "nextNodeId": "node_fire_attack",
+          "randomEventId": "",
+          "historicalExplanation": "若周瑜主动破坏，联盟将更加脆弱",
+          "resultScript": [
+            {
+              "id": "result_zhouyu_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "周瑜派人暗中阻挠，但诸葛亮早有准备。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "role_zhuge": {
+          "currentSituation": "周瑜以造箭为由刁难，三日内需交十万支箭",
+          "informationConflict": "周瑜欲借机除你，你需智取化解",
+          "playerPressure": "若无法完成，联盟将破裂，刘备危矣",
+          "inquiryPurpose": "了解曹军虚实，寻找破局之策",
+          "playerSituation": "孤立无援，唯有智谋可依",
+          "decisionPressure": "期限紧迫，必须立刻行动",
+          "stakes": "联盟存亡与个人生死"
+        },
+        "role_zhouyu": {
+          "currentSituation": "诸葛亮立下军令状，三日内造十万支箭",
+          "informationConflict": "诸葛亮似有把握，但你认为不可能完成",
+          "playerPressure": "若诸葛亮成功，东吴颜面何存",
+          "inquiryPurpose": "确认诸葛亮是否有后手",
+          "playerSituation": "占据主动，但需防诸葛亮反将一军",
+          "decisionPressure": "三日之期将尽，需决定如何应对",
+          "stakes": "东吴军心与联盟主导权"
+        }
+      },
+      "shortContext": "大雾江上，草船借箭。",
+      "detailedContext": "诸葛亮利用大雾天气，以草船诱使曹军射箭，既完成任务又挫败周瑜阴谋。",
+      "glossary": [
+        {
+          "term": "草船借箭",
+          "explanation": "利用草人诱敌射箭，收集箭矢的计策"
+        },
+        {
+          "term": "军令状",
+          "explanation": "立下承诺，若不完成甘受军法处置"
+        }
+      ]
+    },
+    {
+      "id": "node_sacrifice",
+      "title": "苦肉计",
+      "year": "208年十一月",
+      "location": "赤壁吴营",
+      "background": "黄盖献诈降计，需受皮肉之苦取信曹操。",
+      "conflict": "苦肉计风险极大，黄盖年迈能否承受。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "role_huanggai",
+        "role_zhouyu"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "npc_caocao",
+          "stanceInThisNode": "收到黄盖降书，半信半疑",
+          "knowledgeInThisNode": "知晓黄盖受刑消息，不知是苦肉计",
+          "relationshipToPlayerRole": {
+            "role_huanggai": "敌将，疑其投降真伪",
+            "role_zhouyu": "敌军主帅，欲除之"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "role_huanggai": [
+              "丞相可信我投降诚意？",
+              "曹军水战准备如何？"
+            ],
+            "role_zhouyu": [
+              "丞相如何看待黄盖投降？",
+              "曹军有何弱点？"
+            ]
+          }
+        },
+        {
+          "npcId": "npc_jianggan",
+          "stanceInThisNode": "自告奋勇去东吴劝降",
+          "knowledgeInThisNode": "不知黄盖诈降真相，被周瑜利用",
+          "relationshipToPlayerRole": {
+            "role_huanggai": "不知情",
+            "role_zhouyu": "旧友，被周瑜戏弄"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "role_huanggai": [
+              "蒋干此来何意？",
+              "曹操军中情况如何？"
+            ],
+            "role_zhouyu": [
+              "蒋干可曾察觉破绽？",
+              "曹操有何动向？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "role_huanggai": [
+          {
+            "id": "script_hg_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "周瑜升帐议事，黄盖当众提出投降曹操。"
+          },
+          {
+            "id": "script_hg_2",
+            "type": "dialogue",
+            "speakerName": "周瑜",
+            "text": "黄盖！你敢乱我军心，推出去斩了！"
+          }
+        ],
+        "role_zhouyu": [
+          {
+            "id": "script_zy_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "黄盖当众请降，周瑜心中暗喜。"
+          },
+          {
+            "id": "script_zy_2",
+            "type": "dialogue",
+            "speakerName": "黄盖",
+            "text": "都督，曹军势大，不如早降！"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_hg_1",
+          "text": "甘愿受刑，以苦肉计取信曹操",
+          "description": "承受皮肉之苦，换取曹操信任",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_huanggai"
+          ],
+          "stateEffects": {
+            "fire_preparation": 20,
+            "wu_morale": 5
+          },
+          "nextNodeId": "node_final_battle",
+          "randomEventId": "",
+          "historicalExplanation": "黄盖受刑后派阚泽献书，曹操中计",
+          "resultScript": [
+            {
+              "id": "result_hg_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "黄盖被打得皮开肉绽，阚泽携降书赴曹营。"
+            }
+          ]
+        },
+        {
+          "id": "decision_hg_2",
+          "text": "另寻他法，不愿受此酷刑",
+          "description": "放弃苦肉计，寻找其他诈降方式",
+          "type": "alternative",
+          "allowedRoleIds": [
+            "role_huanggai"
+          ],
+          "stateEffects": {
+            "fire_preparation": -10,
+            "alliance_trust": -5
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "反事实：黄盖拒绝苦肉计，火攻计划受阻",
+          "resultScript": [
+            {
+              "id": "result_hg_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "黄盖拒绝受刑，周瑜另谋他策。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zy_1",
+          "text": "当众杖责黄盖，演足苦肉计",
+          "description": "严惩黄盖，让诈降更具说服力",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_zhouyu"
+          ],
+          "stateEffects": {
+            "fire_preparation": 25,
+            "wu_morale": -5
+          },
+          "nextNodeId": "node_fire_attack",
+          "randomEventId": "",
+          "historicalExplanation": "周瑜杖责黄盖，苦肉计成功",
+          "resultScript": [
+            {
+              "id": "result_zy_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "周瑜下令杖责黄盖，众将皆惊。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zy_2",
+          "text": "暗中安排，不演苦肉计",
+          "description": "避免伤及老将，另想办法取信曹操",
+          "type": "alternative",
+          "allowedRoleIds": [
+            "role_zhouyu"
+          ],
+          "stateEffects": {
+            "fire_preparation": -15,
+            "alliance_trust": 5
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "反事实：周瑜不忍黄盖受苦，改用他策",
+          "resultScript": [
+            {
+              "id": "result_zy_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "周瑜暗中安排，黄盖免受皮肉之苦。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "role_huanggai": {
+          "currentSituation": "周瑜帐下，当众请降被斥",
+          "informationConflict": "众将不知是计，以为真降",
+          "playerPressure": "年迈之躯能否承受酷刑",
+          "inquiryPurpose": "确认曹操是否中计",
+          "playerSituation": "即将受刑，生死未卜",
+          "decisionPressure": "必须取信曹操才能实施火攻",
+          "stakes": "火攻成败、东吴存亡"
+        },
+        "role_zhouyu": {
+          "currentSituation": "黄盖请降，正合心意",
+          "informationConflict": "众将不知是计，需演得逼真",
+          "playerPressure": "杖责老将于心不忍",
+          "inquiryPurpose": "确认曹操反应",
+          "playerSituation": "需当众发怒，杖责黄盖",
+          "decisionPressure": "苦肉计必须演得逼真",
+          "stakes": "火攻计划成败"
+        }
+      },
+      "shortContext": "黄盖受刑，阚泽献书。",
+      "detailedContext": "周瑜当众杖责黄盖，黄盖派阚泽送诈降书，曹操中计接纳黄盖投降。",
+      "glossary": [
+        {
+          "term": "苦肉计",
+          "explanation": "故意伤害自己以取信敌人的计谋"
+        },
+        {
+          "term": "阚泽",
+          "explanation": "东吴谋士，替黄盖送诈降书"
+        }
+      ]
+    },
+    {
+      "id": "node_fire_attack",
+      "title": "火攻决策",
+      "year": "208年十一月",
+      "location": "赤壁吴营",
+      "background": "万事俱备只欠东风，火攻计划即将实施。",
+      "conflict": "冬季多西北风，若无东南风火攻必败。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "role_zhouyu",
+        "role_lusu"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "npc_sunquan",
+          "stanceInThisNode": "支持火攻但担忧风险，希望确保万无一失",
+          "knowledgeInThisNode": "知晓火攻大计，不知具体执行细节和风向变化",
+          "relationshipToPlayerRole": {
+            "role_zhouyu": "信任其军事才能，委以全权",
+            "role_lusu": "倚重其协调能力，视为心腹"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "role_zhouyu": [
+              "主公对火攻有何顾虑？",
+              "若风向突变如何应对？"
+            ],
+            "role_lusu": [
+              "主公是否还有疑虑？",
+              "联盟军如何配合？"
+            ]
+          }
+        },
+        {
+          "npcId": "npc_pangtong",
+          "stanceInThisNode": "自信连环计已成功，期待火攻实施",
+          "knowledgeInThisNode": "知晓曹军战船连环，不知东吴具体进攻时机",
+          "relationshipToPlayerRole": {
+            "role_zhouyu": "欣赏其谋略，愿助一臂之力",
+            "role_lusu": "认可其协调之功，视为同道"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "role_zhouyu": [
+              "曹军战船连环是否牢固？",
+              "曹操是否察觉连环计？"
+            ],
+            "role_lusu": [
+              "连环计能否持续有效？",
+              "曹军有无应对之策？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "role_zhouyu": [
+          {
+            "id": "script_zhouyu_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "东南风起，旗帜猎猎作响，周瑜立于帐外，仰望天象。"
+          },
+          {
+            "id": "script_zhouyu_2",
+            "type": "dialogue",
+            "speakerName": "周瑜",
+            "text": "孔明果真借来东风，天助我也！传令黄盖，准备出发！"
+          }
+        ],
+        "role_lusu": [
+          {
+            "id": "script_lusu_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "鲁肃匆匆赶来，神色凝重，似有要事禀报。"
+          },
+          {
+            "id": "script_lusu_2",
+            "type": "dialogue",
+            "speakerName": "鲁肃",
+            "text": "都督，风向已变，诸葛亮所言不虚，火攻时机已至。"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_zhouyu_1",
+          "text": "立即发动火攻，趁风向有利出击",
+          "description": "抓住战机，不给曹军反应时间",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_zhouyu"
+          ],
+          "stateEffects": {
+            "battle_advantage": 15,
+            "fire_preparation": 10
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "正史中周瑜抓住东南风时机，黄盖率火船突袭，大破曹军。",
+          "resultScript": [
+            {
+              "id": "result_zhouyu_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "黄盖领命出发，火船乘风冲向曹军水寨，烈焰冲天而起。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zhouyu_2",
+          "text": "再等一时，确保风向稳定",
+          "description": "谨慎行事，避免风向突变导致失败",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "role_zhouyu"
+          ],
+          "stateEffects": {
+            "wu_morale": -5,
+            "fire_preparation": 5
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "若犹豫不决，可能错失战机，东南风或不会持续太久。",
+          "resultScript": [
+            {
+              "id": "result_zhouyu_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "周瑜决定再观察风向，将士们摩拳擦掌，焦急等待命令。"
+            }
+          ]
+        },
+        {
+          "id": "decision_lusu_1",
+          "text": "协调刘备军配合火攻，夹击曹军",
+          "description": "发挥联盟优势，确保各方行动一致",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_lusu"
+          ],
+          "stateEffects": {
+            "alliance_trust": 10,
+            "battle_advantage": 10
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "鲁肃居中协调，刘备军于北岸配合，形成夹击之势。",
+          "resultScript": [
+            {
+              "id": "result_lusu_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "鲁肃派人联络刘备军，约定同时出击，共破曹军。"
+            }
+          ]
+        },
+        {
+          "id": "decision_lusu_2",
+          "text": "建议周瑜暂缓进攻，先稳固联盟",
+          "description": "担心联盟不稳，欲先确保各方信任",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "role_lusu"
+          ],
+          "stateEffects": {
+            "alliance_trust": 5,
+            "battle_advantage": -5
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "若过于谨慎，可能错失火攻最佳时机，影响战局。",
+          "resultScript": [
+            {
+              "id": "result_lusu_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "鲁肃向周瑜进言，周瑜沉思片刻，战机稍纵即逝。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "role_zhouyu": {
+          "currentSituation": "东南风已起，火攻条件成熟，黄盖诈降船队待命。",
+          "informationConflict": "风向能否持续存疑，曹军或有防备。",
+          "playerPressure": "战机稍纵即逝，必须当机立断。",
+          "inquiryPurpose": "确认风向稳定性和曹军状态。",
+          "playerSituation": "身为大都督，全军将士等待你的命令。",
+          "decisionPressure": "风向随时可能改变，拖延可能导致火攻失败。",
+          "stakes": "此战决定江东存亡，影响天下格局。"
+        },
+        "role_lusu": {
+          "currentSituation": "东南风已起，联盟各方准备就绪，只待统一行动。",
+          "informationConflict": "刘备军动向需确认，联盟配合是否默契。",
+          "playerPressure": "需确保联盟各方协调一致，不能出现纰漏。",
+          "inquiryPurpose": "了解各方准备情况，消除协调障碍。",
+          "playerSituation": "作为联盟协调者，肩负维系信任的重任。",
+          "decisionPressure": "火攻时机紧迫，协调工作刻不容缓。",
+          "stakes": "联盟稳固与否，直接影响火攻成败。"
+        }
+      },
+      "shortContext": "东南风已起，连环计已成，火攻时机成熟。",
+      "detailedContext": "庞统已使曹军战船首尾相连，诸葛亮借来东南风，黄盖诈降船队整装待发。周瑜需把握战机发动火攻，鲁肃需协调联盟各方配合行动。此战若胜，可破曹军百万之众；若败，江东基业难保。",
+      "glossary": [
+        {
+          "term": "连环计",
+          "explanation": "庞统献计让曹军战船用铁环相连，以解北方士兵晕船之苦，实为火攻创造条件。"
+        },
+        {
+          "term": "借东风",
+          "explanation": "诸葛亮在七星坛作法，祈求东南风，为火攻创造必要条件。"
+        },
+        {
+          "term": "苦肉计",
+          "explanation": "黄盖与周瑜合演苦肉计，诈降曹操，实为火攻内应。"
+        }
+      ]
+    },
+    {
+      "id": "node_final_battle",
+      "title": "决战赤壁",
+      "year": "208年十一月",
+      "location": "赤壁江面",
+      "background": "黄盖率火船冲向曹军水寨，决战时刻到来。",
+      "conflict": "火攻能否成功，曹军是否有所防备。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "role_huanggai",
+        "role_zhouyu"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "npc_caocao",
+          "stanceInThisNode": "轻敌冒进，对黄盖诈降深信不疑",
+          "knowledgeInThisNode": "不知火攻计划，认为黄盖真心投降",
+          "relationshipToPlayerRole": {
+            "role_huanggai": "视为真心投降的老将",
+            "role_zhouyu": "视为劲敌但轻视其兵力"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "role_huanggai": [
+              "丞相可曾怀疑过我？",
+              "曹军战船为何首尾相连？"
+            ],
+            "role_zhouyu": [
+              "曹军兵力如何部署？",
+              "丞相如何看待江东？"
+            ]
+          }
+        },
+        {
+          "npcId": "npc_caimao",
+          "stanceInThisNode": "担忧水寨布局，但服从军令",
+          "knowledgeInThisNode": "知晓战船相连有隐患，不知火攻将至",
+          "relationshipToPlayerRole": {
+            "role_huanggai": "不知其诈降真相",
+            "role_zhouyu": "视为江东劲敌"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "role_huanggai": [
+              "都督对战船布置有何看法？",
+              "曹军水战准备如何？"
+            ],
+            "role_zhouyu": [
+              "水寨防御有何弱点？",
+              "都督可识得周瑜？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "role_huanggai": [
+          {
+            "id": "script_hg_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "东南风起，黄盖率二十艘火船冲向曹军水寨。"
+          },
+          {
+            "id": "script_hg_2",
+            "type": "dialogue",
+            "speakerName": "黄盖",
+            "text": "老夫苦肉计已成，今日便是曹贼覆灭之时！"
+          }
+        ],
+        "role_zhouyu": [
+          {
+            "id": "script_zy_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "周瑜立于旗舰之上，遥望曹军水寨火光冲天。"
+          },
+          {
+            "id": "script_zy_2",
+            "type": "dialogue",
+            "speakerName": "周瑜",
+            "text": "黄盖得手了！全军出击，乘胜追击！"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_hg_1",
+          "text": "全力冲向曹操旗舰",
+          "description": "孤注一掷，直取曹操首级",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_huanggai"
+          ],
+          "stateEffects": {
+            "battle_advantage": 15,
+            "cao_morale": -10
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "黄盖火船冲阵，曹军大乱，曹操仓皇逃窜。",
+          "resultScript": [
+            {
+              "id": "result_hg_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "火船冲入曹军中军，曹操仓皇跳船逃命。"
+            }
+          ]
+        },
+        {
+          "id": "decision_hg_2",
+          "text": "先烧毁外围战船",
+          "description": "稳扎稳打，扩大火势",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_huanggai"
+          ],
+          "stateEffects": {
+            "fire_preparation": 20,
+            "battle_advantage": 10
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "火势蔓延，曹军战船首尾相连无法逃脱。",
+          "resultScript": [
+            {
+              "id": "result_hg_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "火势迅速蔓延，曹军战船化为火海。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zy_1",
+          "text": "令全军压上围歼",
+          "description": "趁火打劫，一举歼灭曹军",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_zhouyu"
+          ],
+          "stateEffects": {
+            "wu_morale": 15,
+            "battle_advantage": 20
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "周瑜令全军出击，曹军溃败，死伤无数。",
+          "resultScript": [
+            {
+              "id": "result_zy_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "东吴大军压上，曹军溃不成军，死伤惨重。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zy_2",
+          "text": "派兵截断曹操退路",
+          "description": "围三缺一，设伏擒敌",
+          "type": "historical",
+          "allowedRoleIds": [
+            "role_zhouyu"
+          ],
+          "stateEffects": {
+            "battle_advantage": 25,
+            "cao_morale": -15
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "周瑜派兵截断退路，曹操险些被擒。",
+          "resultScript": [
+            {
+              "id": "result_zy_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "伏兵截断退路，曹操狼狈逃窜，险些被擒。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "role_huanggai": {
+          "currentSituation": "火船已冲入曹军水寨，火势蔓延。",
+          "informationConflict": "曹军似有防备，但火势已成。",
+          "playerPressure": "时机稍纵即逝，必须果断行动。",
+          "inquiryPurpose": "确认曹军虚实，把握战机。",
+          "playerSituation": "身处火船之上，生死一线。",
+          "decisionPressure": "火势将尽，必须速战速决。",
+          "stakes": "此战成败关乎东吴存亡。"
+        },
+        "role_zhouyu": {
+          "currentSituation": "黄盖火攻得手，曹军大乱。",
+          "informationConflict": "曹军兵力仍众，不可轻敌。",
+          "playerPressure": "战机稍纵即逝，需果断下令。",
+          "inquiryPurpose": "判断曹军虚实，把握追击时机。",
+          "playerSituation": "立于旗舰指挥，全局在握。",
+          "decisionPressure": "战机不可失，必须速断。",
+          "stakes": "此战决定江东命运。"
+        }
+      },
+      "shortContext": "火船冲阵，曹军大乱。",
+      "detailedContext": "黄盖率火船突入曹军水寨，东南风助火势，曹军战船首尾相连无法逃脱。",
+      "glossary": [
+        {
+          "term": "火船",
+          "explanation": "装满油脂、硫磺等引火物的战船。"
+        },
+        {
+          "term": "水寨",
+          "explanation": "水上营寨，战船停泊"
+        }
+      ]
+    }
+  ],
+  "stateSchema": [
+    {
+      "key": "alliance_trust",
+      "label": "联盟信任",
+      "description": "孙刘联盟的稳固程度",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 50
+    },
+    {
+      "key": "cao_morale",
+      "label": "曹军士气",
+      "description": "曹军整体士气与战斗力",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 80
+    },
+    {
+      "key": "wu_morale",
+      "label": "东吴军心",
+      "description": "东吴军队的战斗意志",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 60
+    },
+    {
+      "key": "fire_preparation",
+      "label": "火攻准备",
+      "description": "火攻计划的完成度",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 30
+    },
+    {
+      "key": "battle_advantage",
+      "label": "战局优势",
+      "description": "联军的整体优势程度",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 40
+    }
+  ],
+  "defaultState": {
+    "alliance_trust": 50,
+    "cao_morale": 80,
+    "wu_morale": 60,
+    "fire_preparation": 30,
+    "battle_advantage": 40
+  },
+  "randomEvents": [
+    {
+      "id": "random_1",
+      "title": "东南风起",
+      "description": "冬季罕见东南风，火攻时机成熟",
+      "relatedStateKeys": [
+        "fire_preparation",
+        "battle_advantage"
+      ],
+      "probabilityFormulaDescription": "火攻准备度越高，东南风概率越大",
+      "successText": "东南风骤起，火攻计划可以实施。",
+      "failureText": "风向不变，火攻计划被迫推迟。",
+      "successEffects": {
+        "fire_preparation": 30,
+        "battle_advantage": 20
+      },
+      "failureEffects": {
+        "fire_preparation": -10,
+        "wu_morale": -10
+      }
+    },
+    {
+      "id": "random_2",
+      "title": "曹军疫病",
+      "description": "北方士兵水土不服，疫病蔓延",
+      "relatedStateKeys": [
+        "cao_morale",
+        "battle_advantage"
+      ],
+      "probabilityFormulaDescription": "时间越久，疫病概率越高",
+      "successText": "曹军疫病蔓延，士气大跌。",
+      "failureText": "曹军防疫得当，疫病未扩散。",
+      "successEffects": {
+        "cao_morale": -20,
+        "battle_advantage": 15
+      },
+      "failureEffects": {
+        "cao_morale": -5
+      }
+    }
+  ],
+  "endings": [
+    {
+      "id": "ending_1",
+      "title": "赤壁大捷",
+      "priority": 1,
+      "conditionDescription": "火攻准备≥80，战局优势≥70",
+      "summary": "火攻成功，曹军大败，三国鼎立格局形成。",
+      "historyComparison": "与正史一致，孙刘联军取得决定性胜利。",
+      "counterfactualExplanation": "若无东南风或黄盖诈降失败，火攻难以成功。",
+      "endingNarration": [
+        {
+          "id": "ending_1_text",
+          "type": "endingNarration",
+          "speakerName": "旁白",
+          "text": "烈火张天，曹军战船化为灰烬。曹操仓皇北逃，天下三分之势由此奠定。"
+        }
+      ],
+      "backgroundImage": ""
+    },
+    {
+      "id": "ending_2",
+      "title": "联盟破裂",
+      "priority": 2,
+      "conditionDescription": "联盟信任≤20",
+      "summary": "孙刘联盟瓦解，曹操各个击破。",
+      "historyComparison": "与正史相反，东吴主和派占上风。",
+      "counterfactualExplanation": "若诸葛亮未能说服孙权，或周瑜与诸葛亮矛盾激化，联盟可能破裂。",
+      "endingNarration": [
+        {
+          "id": "ending_2_text",
+          "type": "endingNarration",
+          "speakerName": "旁白",
+          "text": "联盟破裂，刘备退守江夏，孙权纳降称臣。曹操一统天下之势已成。"
+        }
+      ],
+      "backgroundImage": ""
+    },
+    {
+      "id": "ending_3",
+      "title": "僵持对峙",
+      "priority": 3,
+      "conditionDescription": "火攻准备40-79，战局优势40-69",
+      "summary": "火攻受挫，双方隔江对峙。",
+      "historyComparison": "与正史不同，赤壁之战未能决出胜负。",
+      "counterfactualExplanation": "若风向不利或曹军有所防备，火攻可能失败。",
+      "endingNarration": [
+        {
+          "id": "ending_3_text",
+          "type": "endingNarration",
+          "speakerName": "旁白",
+          "text": "火攻未能重创曹军，双方隔江对峙。曹操粮草不济，最终撤军北还。"
+        }
+      ],
+      "backgroundImage": ""
+    }
+  ]
+}

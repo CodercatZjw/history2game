@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #fff7e6;
+  background: #120d0b;
+  font-family: "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.vn-bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.vn-scrim {
+  background:
+    linear-gradient(180deg, rgba(8, 6, 5, 0.36) 0%, rgba(8, 6, 5, 0.12) 38%, rgba(8, 6, 5, 0.82) 100%),
+    radial-gradient(circle at 18% 18%, rgba(247, 188, 98, 0.14), transparent 28%),
+    radial-gradient(circle at 86% 30%, rgba(116, 178, 180, 0.12), transparent 30%);
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 220, 162, 0.28);
+  background: rgba(17, 12, 10, 0.72);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(14px);
+}
+
+.choice-button {
+  border: 1px solid rgba(255, 220, 162, 0.28);
+  background: linear-gradient(90deg, rgba(92, 48, 32, 0.9), rgba(30, 27, 28, 0.88));
+}
+
+.choice-button:hover {
+  border-color: rgba(255, 229, 179, 0.72);
+  background: linear-gradient(90deg, rgba(126, 65, 39, 0.95), rgba(34, 46, 48, 0.95));
+}
+
+.thin-scrollbar {
+  scrollbar-color: rgba(247, 191, 114, 0.55) rgba(20, 14, 12, 0.4);
+  scrollbar-width: thin;
+}
+
+.safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}

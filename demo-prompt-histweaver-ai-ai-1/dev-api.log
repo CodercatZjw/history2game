@@ -1,0 +1,6 @@
+
+> histweaver@0.1.0 dev:api
+> node server/index.js
+
+[histweaver-api] listening on http://127.0.0.1:8787
+[histweaver-api] generated configs: C:\Users\Administrator\Documents\Codex\2026-05-23\demo-prompt-histweaver-ai-ai-1\generated-configs

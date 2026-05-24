@@ -1,0 +1,1045 @@
+{
+  "id": "tang_crisis_756",
+  "title": "天宝惊雷：盛世的崩塌",
+  "period": "唐朝天宝十五载（公元756年）",
+  "intro": "天宝十四载，渔阳鼙鼓动地来。安禄山以十五万大军起兵造反，大唐盛世的美梦瞬间破碎。从河北的烽火到潼关的失守，再到长安的沦陷，你将置身于这场历史洪流中，体验权力、忠诚与生存的残酷博弈。",
+  "theme": "盛世危机、权力斗争、忠诚与背叛、生存抉择",
+  "assets": {
+    "coverImage": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23d4a373'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-size='40' fill='%23fff'%3E天宝惊雷%3C/text%3E%3C/svg%3E",
+    "defaultBackground": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23e9ecef'/%3E%3C/svg%3E",
+    "sceneBackgrounds": {
+      "palace": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23ffd700'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle'%3E兴庆宫%3C/text%3E%3C/svg%3E",
+      "tongguan": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%238b4513'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle'%3E潼关城头%3C/text%3E%3C/svg%3E",
+      "mawei": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23a9a9a9'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle'%3E马嵬坡驿站%3C/text%3E%3C/svg%3E",
+      "street": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23696969'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle'%3E长安街头%3C/text%3E%3C/svg%3E",
+      "lingwu": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%234a6741'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle'%3E灵武军帐%3C/text%3E%3C/svg%3E"
+    },
+    "portraits": {
+      "yang_guozhong": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect fill='%23ff6b6b'/%3E%3Ctext y='50%25'%3E杨国忠%3C/text%3E%3C/svg%3E",
+      "ge_shuhan": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect fill='%234ecdc4'/%3E%3Ctext y='50%25'%3E哥舒翰%3C/text%3E%3C/svg%3E",
+      "li_heng": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect fill='%23455a64'/%3E%3Ctext y='50%25'%3E李亨%3C/text%3E%3C/svg%3E",
+      "du_fu": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect fill='%2395a5a6'/%3E%3Ctext y='50%25'%3E杜甫%3C/text%3E%3C/svg%3E",
+      "li_longji": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect fill='%23f1c40f'/%3E%3Ctext y='50%25'%3E李隆基%3C/text%3E%3C/svg%3E",
+      "yang_yuhuan": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect fill='%23e91e63'/%3E%3Ctext y='50%25'%3E杨玉环%3C/text%3E%3C/svg%3E",
+      "gao_lishi": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect fill='%239c27b0'/%3E%3Ctext y='50%25'%3E高力士%3C/text%3E%3C/svg%3E",
+      "chen_xuanli": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect fill='%23607d8b'/%3E%3Ctext y='50%25'%3E陈玄礼%3C/text%3E%3C/svg%3E",
+      "guo_ziyi": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect fill='%232e7d32'/%3E%3Ctext y='50%25'%3E郭子仪%3C/text%3E%3C/svg%3E",
+      "an_lushan": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect fill='%23d84315'/%3E%3Ctext y='50%25'%3E安禄山%3C/text%3E%3C/svg%3E"
+    },
+    "endingBackgrounds": {
+      "bad": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23000'/%3E%3C/svg%3E",
+      "good": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23fff'/%3E%3C/svg%3E"
+    }
+  },
+  "timeline": [
+    {
+      "id": "t1",
+      "year": "755年11月",
+      "title": "安禄山起兵",
+      "description": "安禄山在范阳起兵造反，大军南下，河北诸郡望风瓦解。",
+      "location": "范阳",
+      "importance": "critical"
+    },
+    {
+      "id": "t2",
+      "year": "756年1月",
+      "title": "洛阳陷落",
+      "description": "安禄山攻陷东都洛阳，封常清败退，潼关门户大开。",
+      "location": "洛阳",
+      "importance": "high"
+    },
+    {
+      "id": "t3",
+      "year": "756年6月",
+      "title": "潼关失守",
+      "description": "哥舒翰被迫出关迎敌，大败被俘，长安最后一道防线崩溃。",
+      "location": "潼关",
+      "importance": "critical"
+    },
+    {
+      "id": "t4",
+      "year": "756年6月",
+      "title": "马嵬坡之变",
+      "description": "禁军哗变，杨国忠被杀，杨贵妃赐死，玄宗权威扫地。",
+      "location": "马嵬坡",
+      "importance": "critical"
+    },
+    {
+      "id": "t5",
+      "year": "756年7月",
+      "title": "灵武即位",
+      "description": "太子李亨在灵武即位，尊玄宗为太上皇，开启平叛新阶段。",
+      "location": "灵武",
+      "importance": "high"
+    }
+  ],
+  "roles": [
+    {
+      "id": "yang_guozhong",
+      "name": "杨国忠",
+      "identity": "大唐宰相，杨贵妃之兄",
+      "goal": "维持个人权势，借平叛之名清除异己，阻止太子李亨上位。",
+      "dilemma": "安禄山以诛杨国忠为名起兵，若平叛失败必死无疑；若平叛成功，功高盖主的太子可能借机夺权。",
+      "visibleInfo": "你掌握朝政大权，但人心尽失。安禄山造反让你焦头烂额，你必须证明自己能控制局势。",
+      "hiddenMotivation": "其实你根本不懂军事，只想把军权抓在自己人手里，哪怕牺牲国家利益也要保住地位。",
+      "portraitImage": "yang_guozhong",
+      "initialStateModifiers": {
+        "court_support": -20,
+        "military_morale": -10
+      },
+      "playableNodeIds": ["node_xianyang_alert", "node_tongguan_stand"],
+      "routeDescription": "权臣路线：在政治漩涡中挣扎，试图用权术解决战争危机。"
+    },
+    {
+      "id": "ge_shuhan",
+      "name": "哥舒翰",
+      "identity": "兵马副元帅，一代名将",
+      "goal": "守住潼关，保全国家，同时避免成为政治斗争的牺牲品。",
+      "dilemma": "皇帝和宰相逼你出关决战，你知道那是死路；若死守不出，又会被视为抗命不尊，甚至被怀疑有异心。",
+      "visibleInfo": "你手握二十万大军，但多是市井新募之兵。你病体沉重，深知出关必败，守关或可苟延残喘。",
+      "hiddenMotivation": "我对朝廷的倾轧感到厌倦，只想守住军人的底线，不想重蹈封常清的覆辙。",
+      "portraitImage": "ge_shuhan",
+      "initialStateModifiers": {
+        "military_morale": 50,
+        "defense_strength": 80
+      },
+      "playableNodeIds": ["node_tongguan_stand"],
+      "routeDescription": "统帅路线：在君命与军事现实之间做出痛苦抉择。"
+    },
+    {
+      "id": "li_heng",
+      "name": "李亨",
+      "identity": "皇太子，未来的唐肃宗",
+      "goal": "在乱世中保全性命，寻找机会摆脱父皇的控制，夺取平叛主导权。",
+      "dilemma": "父皇昏聩，宰相奸邪，若随父皇入蜀将永无出头之日；若分兵北上，则是分裂朝廷的大罪。",
+      "visibleInfo": "你一直生活在李林甫和杨国忠的阴影下，如今大乱，是你翻盘的唯一机会。",
+      "hiddenMotivation": "我对父皇既有敬畏也有怨恨，我要证明我才是大唐的中兴之主。",
+      "portraitImage": "li_heng",
+      "initialStateModifiers": {
+        "court_support": 30,
+        "people_support": 20
+      },
+      "playableNodeIds": ["node_mawei_mutiny", "node_lingwu_throne"],
+      "routeDescription": "储君路线：在逃亡中积蓄力量，完成权力的交接。"
+    },
+    {
+      "id": "du_fu",
+      "name": "杜甫",
+      "identity": "右卫率府胄曹参军，诗人",
+      "goal": "在战乱中保全家人，寻找报效国家的机会，记录时代的苦难。",
+      "dilemma": "你官职低微，无力回天。你想投奔灵武的朝廷，却被叛军困在长安；你想带家人逃难，前路茫茫。",
+      "visibleInfo": "你看到了长安的繁华变为废墟，你目睹了皇室的仓皇出逃，你手中只有一支笔。",
+      "hiddenMotivation": "我想做官，想济世救民，但此刻我只想让妻儿活下去。",
+      "portraitImage": "du_fu",
+      "initialStateModifiers": {
+        "people_support": 10,
+        "fame": 5
+      },
+      "playableNodeIds": ["node_changan_fall", "node_lingwu_throne"],
+      "routeDescription": "士人路线：以旁观者的视角见证盛世的崩塌，在乱世中求存。"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "li_longji",
+      "name": "李隆基",
+      "identity": "大唐皇帝（唐玄宗）",
+      "globalStance": "逃避现实，只想保住性命和余下的享乐，对局势失去掌控力。",
+      "personality": "年老昏聩，自负，不愿承认错误，对杨贵妃有深厚感情。",
+      "knowledgeBoundary": "只知道前线传来的战报，不知道民间疾苦，不相信安禄山会造反直到最后一刻。",
+      "portraitImage": "li_longji",
+      "promptProfileKey": "emperor_aging"
+    },
+    {
+      "id": "yang_yuhuan",
+      "name": "杨玉环",
+      "identity": "贵妃",
+      "globalStance": "不问政事，只想与皇帝厮守，对即将到来的杀身之祸毫无察觉。",
+      "personality": "天真，艺术气质，依赖皇帝，对政治斗争一无所知。",
+      "knowledgeBoundary": "完全不知道安禄山起兵的严重性，不知道全军将士恨她入骨。",
+      "portraitImage": "yang_yuhuan",
+      "promptProfileKey": "consort_innocent"
+    },
+    {
+      "id": "gao_lishi",
+      "name": "高力士",
+      "identity": "宦官，皇帝的心腹",
+      "globalStance": "绝对忠诚于皇帝个人，试图在混乱中维持皇帝的安全和尊严。",
+      "personality": "圆滑，忠诚，洞察力强，但不敢违逆皇帝的昏招。",
+      "knowledgeBoundary": "知道杨国忠误国，知道军心不稳，但不敢直言进谏，只能暗中周旋。",
+      "portraitImage": "gao_lishi",
+      "promptProfileKey": "eunuch_loyal"
+    },
+    {
+      "id": "chen_xuanli",
+      "name": "陈玄礼",
+      "identity": "禁军统领（龙武大将军）",
+      "globalStance": "忠诚于大唐社稷，认为杨国忠是祸根，决心在马嵬坡清君侧。",
+      "personality": "刚正，果敢，有军事头脑，痛恨奸臣。",
+      "knowledgeBoundary": "知道士兵已经到了崩溃边缘，知道太子有意图夺权，掌握禁军的实际指挥权。",
+      "portraitImage": "chen_xuanli",
+      "promptProfileKey": "general_righteous"
+    },
+    {
+      "id": "guo_ziyi",
+      "name": "郭子仪",
+      "identity": "朔方节度使",
+      "globalStance": "坚决平叛，维护国家统一，是朝廷最后的希望。",
+      "personality": "沉稳，大度，军事天才，忠诚。",
+      "knowledgeBoundary": "了解河北战局，知道潼关的重要性，不知道长安内部的政治倾轧有多严重。",
+      "portraitImage": "guo_ziyi",
+      "promptProfileKey": "general_steadfast"
+    },
+    {
+      "id": "an_lushan",
+      "name": "安禄山",
+      "identity": "叛军首领，三镇节度使",
+      "globalStance": "野心勃勃，利用朝廷腐败起兵，意图夺取天下。",
+      "personality": "狡诈，残忍，善于伪装，利用胡人部落兵力。",
+      "knowledgeBoundary": "知道朝廷虚实，知道杨国忠无能，但不知道郭子仪、李光弼的反击能力有多强。",
+      "portraitImage": "an_lushan",
+      "promptProfileKey": "rebel_ambitious"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node_xianyang_alert",
+      "title": "咸阳的急报",
+      "year": "755年12月",
+      "location": "长安·兴庆宫",
+      "background": "宫内依然歌舞升平，但前线的战报如雪片般飞来。安禄山造反的消息已经无法隐瞒。",
+      "backgroundImage": "palace",
+      "conflict": "是否立即向天下公布安禄山造反的消息，并调动中央军平叛？",
+      "playableRoleIds": ["yang_guozhong"],
+      "availableNPCs": [
+        {
+          "npcId": "li_longji",
+          "stanceInThisNode": "震惊且不愿相信，认为这只是安禄山与朝廷的误会，希望招抚。",
+          "knowledgeInThisNode": "知道安禄山起兵，但不知道河北已全面崩溃，认为这只是局部骚乱。",
+          "relationshipToPlayerRole": {
+            "yang_guozhong": "你是他的宰相和依靠，他现在完全听信你的判断，但也对你之前吹嘘的'安禄山不敢反'感到不满。"
+          },
+          "quickQuestionsByPlayerRole": {
+            "yang_guozhong": [
+              "陛下，安禄山反迹已现，若不立刻发兵，恐东都不保，该派何人挂帅？",
+              "陛下，是否可以下诏削去安禄山官爵，以此号召天下兵马勤王？",
+              "陛下，臣愿亲自督师，但这军费粮草，恐怕要动用内库..."
+            ]
+          }
+        },
+        {
+          "npcId": "gao_lishi",
+          "stanceInThisNode": "焦虑，试图提醒皇帝事态严重，但不敢触怒皇帝，希望宰相能拿出对策。",
+          "knowledgeInThisNode": "知道前线战报属实，知道宫外人心惶惶。",
+          "relationshipToPlayerRole": {
+            "yang_guozhong": "他看不起你的为人，但此刻为了皇帝安危，不得不与你合作，眼神中带着审视。"
+          },
+          "quickQuestionsByPlayerRole": {
+            "yang_guozhong": [
+              "高将军，陛下现在的身体状况，能经受得住这惊吓吗？这消息该如何婉转上奏？",
+              "禁军现在的战备如何？如果长安有变，能否护送陛下安全离京？",
+              "大家都说安禄山是冲着我来的，依你看，陛下会为了安抚叛军而牺牲我吗？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "yang_guozhong": [
+          {
+            "type": "narration",
+            "speaker": "旁白",
+            "text": "急报传来，安禄山在范阳起兵，号称二十万大军南下。你站在兴庆宫的沉香亭畔，手中捏着那封沾血的战报，冷汗浸透了官服。"
+          },
+          {
+            "type": "fixedDialogue",
+            "speaker": "杨国忠",
+            "text": "（内心独白）这胡儿果然反了！但我早有预言，陛下不听...现在当务之急，是如何利用这次危机，把兵权抓在手里，顺便...除掉那个太子。"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "d1_1",
+          "description": "力主立即平叛，推荐亲信（如封常清、高仙芝）挂帅，并请求皇帝下罪己诏。",
+          "type": "historical",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "皇帝采纳了你的建议，但拒绝下罪己诏。你成功调动了中央军，但战局迅速恶化，你的政治威望随前线败报一同跌落。"
+            }
+          ],
+          "effects": {
+            "court_support": -10,
+            "military_morale": 10
+          }
+        },
+        {
+          "id": "d1_2",
+          "description": "隐瞒部分军情，试图与安禄山谈判招抚，拖延时间巩固自己在京城的军权。",
+          "type": "counterfactual",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "你派出的使者被安禄山斩首。拖延战术导致防御准备不足，洛阳迅速陷落，朝野上下对你的无能怒火中烧。"
+            }
+          ],
+          "effects": {
+            "court_support": -30,
+            "military_morale": -20
+          }
+        }
+      ],
+      "nodeIntroForRoles": {
+        "yang_guozhong": {
+          "currentSituation": "安禄山造反的消息已经传开，作为宰相，你必须给出应对方案。",
+          "informationConflict": "你知道局势危急，但皇帝不愿面对现实，你必须权衡说真话的后果。",
+          "playerPressure": "满朝文武都在看着你，如果你处理不好，这就是你政治生命的终点。",
+          "inquiryPurpose": "你需要探听皇帝的底线，以及禁军的态度。",
+          "playerSituation": "你站在权力的巅峰，脚下却是即将崩塌的火山。",
+          "decisionPressure": "时间紧迫，每一刻的犹豫都可能让叛军推进百里。",
+          "stakes": "大唐的国运和你项上人头，都在此一举。"
+        }
+      },
+      "shortContext": "安禄山起兵初期，朝廷应对策略制定。",
+      "detailedContext": "天宝十四载冬，安禄山以'清君侧，诛杨国忠'为名起兵。此时大唐承平日久，民不知兵，河北州县望风瓦解。杨国忠作为宰相，对此负有不可推卸的责任，但他仍试图操控局势。",
+      "glossary": [
+        {
+          "term": "范阳",
+          "definition": "安禄山的大本营，今北京一带。"
+        },
+        {
+          "term": "清君侧",
+          "definition": "清除皇帝身边的奸臣，是造反的常用借口。"
+        }
+      ]
+    },
+    {
+      "id": "node_tongguan_stand",
+      "title": "潼关死地",
+      "year": "756年6月",
+      "location": "潼关·城楼",
+      "background": "洛阳已陷，哥舒翰抱病镇守潼关。身后是长安，身前是叛军主力。",
+      "backgroundImage": "tongguan",
+      "conflict": "皇帝连降圣旨催促出关迎敌，哥舒翰深知出关必败，但守关可能被定性为谋反。",
+      "playableRoleIds": ["ge_shuhan", "yang_guozhong"],
+      "availableNPCs": [
+        {
+          "npcId": "li_longji",
+          "stanceInThisNode": "急于求成，认为哥舒翰拥兵自重，听信杨国忠谗言，强令出兵。",
+          "knowledgeInThisNode": "只知道叛军在潼关停滞不前，不知道叛军战斗力极强且潼关守军多为新兵。",
+          "relationshipToPlayerRole": {
+            "ge_shuhan": "他对你的拖延感到愤怒，怀疑你忠诚度，不断派使者催战。",
+            "yang_guozhong": "他听信你的建议，认为哥舒翰可能威胁皇权，支持你催战的立场。"
+          },
+          "quickQuestionsByPlayerRole": {
+            "ge_shuhan": [
+              "陛下！贼军锋芒正盛，而我军多是市井之徒，未习战阵。此时出关，是以卵击石啊！",
+              "陛下，郭子仪、李光弼在河北连战连捷，只要我们守住潼关，叛军后方必乱，届时再战不迟。",
+              "陛下若疑臣有二心，臣愿交出兵权，只求陛下不要让这二十万儿郎去送死！"
+            ],
+            "yang_guozhong": [
+              "陛下，哥舒翰手握重兵，若他在潼关久拖不战，恐生异心啊。",
+              "陛下，叛军虽众，但多是胡人，不耐暑热，我军若此时出击，定能一举击溃。",
+              "陛下，只要哥舒翰出关，无论胜败，兵权就不再集中在他一人手中了。"
+            ]
+          }
+        },
+        {
+          "npcId": "guo_ziyi",
+          "stanceInThisNode": "支持坚守潼关，他在河北积极进攻，试图切断叛军后路。",
+          "knowledgeInThisNode": "知道潼关守军素质差，知道河北战局有利，知道只要潼关不丢，叛军必败。",
+          "relationshipToPlayerRole": {
+            "ge_shuhan": "他是你的战友，寄希望于你能守住大门，让他直捣黄龙。",
+            "yang_guozhong": "他对你这种奸臣深恶痛绝，但此刻为了大局，不得不通过奏折表达战略配合。"
+          },
+          "quickQuestionsByPlayerRole": {
+            "ge_shuhan": [
+              "郭将军，河北战局如何？你能在多久之内威胁叛军后方？",
+              "若我出关战败，你那边能否顶住叛军的反扑？",
+              "朝廷催战甚急，你能否上书陛下，说明坚守之利？"
+            ],
+            "yang_guozhong": [
+              "郭将军，你若能在河北速胜，我这边的压力也会小些。",
+              "你觉得哥舒翰这老匹夫，到底能不能守住潼关？",
+              "若潼关失守，你的朔方军将如何自处？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 4,
+      "fixedScript": {
+        "ge_shuhan": [
+          {
+            "type": "narration",
+            "speaker": "旁白",
+            "text": "风沙漫卷，潼关城头。哥舒翰扶着城垛，剧烈地咳嗽着。远处是安禄山的连营，身后是长安方向传来的催战鼓声——那是皇帝的愤怒。"
+          },
+          {
+            "type": "fixedDialogue",
+            "speaker": "哥舒翰",
+            "text": "（仰天长叹）我这一生，征战无数，从未怕过谁。可如今，我要面对的不仅是安禄山的铁骑，更是来自长安的刀子。"
+          }
+        ],
+        "yang_guozhong": [
+          {
+            "type": "narration",
+            "speaker": "旁白",
+            "text": "你在长安的相府中，听着前线的战报。你知道哥舒翰恨你入骨，你也知道如果让他得势，你必死无疑。"
+          },
+          {
+            "type": "fixedDialogue",
+            "speaker": "杨国忠",
+            "text": "（冷笑）哥舒翰啊哥舒翰，你想学安禄山拥兵自重吗？陛下，必须逼他出战！"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "d2_1",
+          "description": "（哥舒翰）恸哭出关，明知是死局也要执行君命。",
+          "type": "historical",
+          "roleRestriction": "ge_shuhan",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "二十万大军出关，在灵宝遭遇叛军伏击，全军覆没。你被俘，潼关失守，长安门户大开。"
+            }
+          ],
+          "effects": {
+            "military_morale": -100,
+            "defense_strength": -100
+          }
+        },
+        {
+          "id": "d2_2",
+          "description": "（哥舒翰）抗命死守，甚至回师清君侧（诛杀杨国忠）。",
+          "type": "counterfactual",
+          "roleRestriction": "ge_shuhan",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "你回师长安，诛杀杨国忠。皇帝震恐，太子李亨趁机夺权。虽然保住了潼关，但大唐陷入了更复杂的内战。"
+            }
+          ],
+          "effects": {
+            "court_support": -50,
+            "defense_strength": 20
+          }
+        },
+        {
+          "id": "d2_3",
+          "description": "（杨国忠）继续进谗言，逼迫哥舒翰出兵。",
+          "type": "historical",
+          "roleRestriction": "yang_guozhong",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "哥舒翰被迫出兵，大败。潼关失守，你作为导致战败的罪魁祸首，在逃亡路上成为众矢之的。"
+            }
+          ],
+          "effects": {
+            "court_support": -50,
+            "military_morale": -100
+          }
+        },
+        {
+          "id": "d2_4",
+          "description": "（杨国忠）意识到危险，建议皇帝亲征或派太子监国，自己退居幕后。",
+          "type": "counterfactual",
+          "roleRestriction": "yang_guozhong",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "你试图甩锅，但愤怒的士兵和百姓不会放过你。你的政治投机反而加速了你的灭亡。"
+            }
+          ],
+          "effects": {
+            "court_support": -20
+          }
+        }
+      ],
+      "nodeIntroForRoles": {
+        "ge_shuhan": {
+          "currentSituation": "潼关已成孤岛，皇帝的使者一个接一个，催你出战。",
+          "informationConflict": "你清楚敌强我弱，但朝廷认为你是怯战。",
+          "playerPressure": "不出战是抗旨，出战是送死。",
+          "inquiryPurpose": "你需要确认河北郭子仪的进展，以及长安政治风向。",
+          "playerSituation": "你是帝国最后的盾牌，但这面盾牌正被自己人敲打。",
+          "decisionPressure": "皇帝的耐心已经耗尽，圣旨已经变成了威胁。",
+          "stakes": "二十万条性命，长安城的安危。"
+        },
+        "yang_guozhong": {
+          "currentSituation": "潼关局势紧张，你担心哥舒翰拥兵自重。",
+          "informationConflict": "军事上可能应该守，但政治上你必须除掉哥舒翰的威胁。",
+          "playerPressure": "如果潼关不失，哥舒翰功高盖主，你必被清算。",
+          "inquiryPurpose": "你需要确认皇帝的态度，确保他站在你这边。",
+          "playerSituation": "你在玩火，试图用军事冒险解决政治对手。",
+          "decisionPressure": "哥舒翰如果真的反了，第一个杀的就是你。",
+          "stakes": "你的权位，以及大唐的国运。"
+        }
+      },
+      "shortContext": "潼关决战前夕，战略与政治的双重博弈。",
+      "detailedContext": "哥舒翰虽然名为兵马副元帅，但手下的二十万大军多为临时招募的市井之徒，战斗力极弱。而安禄山精锐尽出。此时郭子仪在河北连战连捷，战略上本应坚守潼关以待敌变，但唐玄宗与杨国忠出于政治猜忌，强令出兵。",
+      "glossary": [
+        {
+          "term": "灵宝之战",
+          "definition": "哥舒翰出关后遭遇惨败的战役，标志着长安防线彻底崩溃。"
+        }
+      ]
+    },
+    {
+      "id": "node_mawei_mutiny",
+      "title": "马嵬坡惊变",
+      "year": "756年6月",
+      "location": "马嵬坡驿站",
+      "background": "逃亡的路上，禁军饥疲交加，怨气冲天。陈玄礼暗中联络太子，准备兵变。",
+      "backgroundImage": "mawei",
+      "conflict": "禁军哗变，杀死杨国忠，并逼迫皇帝处死杨贵妃。太子李亨面临抉择。",
+      "playableRoleIds": ["li_heng"],
+      "availableNPCs": [
+        {
+          "npcId": "chen_xuanli",
+          "stanceInThisNode": "坚决要求处死杨国忠和杨贵妃，以此平息军愤，否则军队将不再听从指挥。",
+          "knowledgeInThisNode": "知道士兵已经失控，知道如果不杀杨氏兄妹，皇帝和太子都有生命危险。",
+          "relationshipToPlayerRole": {
+            "li_heng": "他希望你能站出来支持兵变，继承大统，重振大唐。"
+          },
+          "quickQuestionsByPlayerRole": {
+            "li_heng": [
+              "陈将军，父皇若不答应，禁军是否会...弑君？",
+              "将军只杀杨国忠，能否放过贵妃？毕竟她是父皇的心头肉。",
+              "若我此时站出来，将士们会拥戴我吗？"
+            ]
+          }
+        },
+        {
+          "npcId": "li_longji",
+          "stanceInThisNode": "绝望，试图保护杨贵妃，但意识到自己已无实权。",
+          "knowledgeInThisNode": "知道杨国忠已死，知道军队在逼宫，不知道太子在其中的作用。",
+          "relationshipToPlayerRole": {
+            "li_heng": "他对你充满戒备，但也希望你能在此时帮他一把，虽然他怀疑你也是幕后推手。"
+          },
+          "quickQuestionsByPlayerRole": {
+            "li_heng": [
+              "父皇，如今军心不稳，唯有忍痛割爱，方能保全社稷啊。",
+              "父皇，儿臣愿带兵断后，请父皇先行入蜀。",
+              "父皇，杨国忠已死，这贵妃...是否可以留她一命，贬为庶人？"
+            ]
+          }
+        },
+        {
+          "npcId": "gao_lishi",
+          "stanceInThisNode": "在皇帝与军队之间周旋，最终为了保住皇帝性命，不得不劝皇帝牺牲贵妃。",
+          "knowledgeInThisNode": "知道大势已去，贵妃必死无疑，只想尽快结束这场闹剧，保皇帝安全。",
+          "relationshipToPlayerRole": {
+            "li_heng": "他看穿了你的野心，但也知道大唐需要新主，对你保持沉默。"
+          },
+          "quickQuestionsByPlayerRole": {
+            "li_heng": [
+              "高将军，父皇的安危全系于你，这局面该如何收场？",
+              "力士，若贵妃不死，禁军真的会散去吗？",
+              "我若此时表态支持父皇，会不会激怒陈玄礼？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "li_heng": [
+          {
+            "type": "narration",
+            "speaker": "旁白",
+            "text": "马嵬坡，烈日当空。杨国忠的头颅已经挂在旗杆上，鲜血滴落。士兵们围住驿站，高喊着'贼本尚在'。你知道，他们在逼皇帝杀杨贵妃。"
+          },
+          {
+            "type": "fixedDialogue",
+            "speaker": "李亨",
+            "text": "（内心独白）父皇还在犹豫...陈玄礼在看着我。这是我摆脱父皇阴影、重振大唐的机会，但这也是逼死父皇爱妃的恶名。"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "d3_1",
+          "description": "默许陈玄礼的行动，并出面安抚军心，与父皇分道扬镳北上。",
+          "type": "historical",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "杨贵妃被赐死。你获得了禁军的效忠，随后北上灵武即位，成为唐肃宗，开启平叛新篇章。"
+            }
+          ],
+          "effects": {
+            "military_morale": 80,
+            "court_support": 50
+          }
+        },
+        {
+          "id": "d3_2",
+          "description": "挺身而出保护杨贵妃，试图用亲情打动士兵，随父皇入蜀。",
+          "type": "counterfactual",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "士兵们被你的孝心感动（或被你的愚蠢震惊），但军心涣散，大部分士兵逃亡。你随父皇入蜀，成为太上皇的陪衬，大唐复兴遥遥无期。"
+            }
+          ],
+          "effects": {
+            "military_morale": -50,
+            "people_support": 20
+          }
+        }
+      ],
+      "nodeIntroForRoles": {
+        "li_heng": {
+          "currentSituation": "杨国忠已死，现在所有的压力都集中在杨贵妃身上。",
+          "informationConflict": "你知道这是夺权的最佳时机，但这也是大逆不道的边缘。",
+          "playerPressure": "陈玄礼在等你表态，父皇在等你救援。",
+          "inquiryPurpose": "你需要确认陈玄礼的忠诚度，以及父皇的真实想法。",
+          "playerSituation": "你是这场政变的隐形受益者，你必须表现得无辜而又果断。",
+          "decisionPressure": "一步走错，要么被父皇记恨，要么被乱兵所杀。",
+          "stakes": "皇位的归属，和大唐的未来。"
+        }
+      },
+      "shortContext": "马嵬坡兵变，大唐权力交接的血腥时刻。",
+      "detailedContext": "天宝十五载六月十四日，禁军行至马嵬坡。饥饿与愤怒让士兵们失去了理智。龙武大将军陈玄礼趁机发动兵变，杀死杨国忠，并逼迫唐玄宗赐死杨贵妃。这是唐朝历史的转折点。",
+      "glossary": [
+        {
+          "term": "马嵬坡",
+          "definition": "今陕西兴平西北，杨贵妃殒命之地。"
+        }
+      ]
+    },
+    {
+      "id": "node_changan_fall",
+      "title": "长安残阳",
+      "year": "756年7月",
+      "location": "长安·杜陵",
+      "background": "皇帝走了，军队走了，长安成了不设防的城市。叛军即将入城。",
+      "backgroundImage": "street",
+      "conflict": "是带着家人逃往灵武投奔新朝廷，还是藏匿于民间苟且偷生？",
+      "playableRoleIds": ["du_fu"],
+      "availableNPCs": [
+        {
+          "npcId": "neighbor_wang",
+          "name": "邻居王大娘",
+          "stanceInThisNode": "惊恐万状，只想带着孩子逃往南山避难，认为投奔官军是死路一条。",
+          "knowledgeInThisNode": "知道城门即将关闭，知道叛军杀人如麻，不知道灵武有新朝廷。",
+          "relationshipToPlayerRole": {
+            "du_fu": "你是她眼中的读书人，她希望你能拿个主意，但也怕你读书读傻了。"
+          },
+          "quickQuestionsByPlayerRole": {
+            "du_fu": [
+              "王大娘，这叛军进城，咱们是躲在家里好，还是往山里跑？",
+              "听说太子在灵武即位了，我们要不要去投奔？",
+              "家里还有多少干粮？能撑到乱兵退去吗？"
+            ]
+          }
+        },
+        {
+          "npcId": "wounded_soldier",
+          "name": "溃兵赵六",
+          "stanceInThisNode": "绝望，对朝廷彻底失望，只想抢点财物回老家，劝杜甫不要去送死。",
+          "knowledgeInThisNode": "亲眼目睹潼关惨败，知道官军已经没有战斗力，知道叛军先锋就在身后。",
+          "relationshipToPlayerRole": {
+            "du_fu": "他看不起你这个文弱书生，觉得你这时候还谈报国是笑话。"
+          },
+          "quickQuestionsByPlayerRole": {
+            "du_fu": [
+              "兄弟，潼关那边到底怎么了？二十万大军真的全完了？",
+              "你说我现在去灵武，路上能活命吗？",
+              "你手里这刀，能卖给我防身吗？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "du_fu": [
+          {
+            "type": "narration",
+            "speaker": "旁白",
+            "text": "长安城的上空，黑烟滚滚。你带着妻儿躲在杜陵的荒草中。身后是繁华落尽的帝都，身前是茫茫未知的逃亡路。"
+          },
+          {
+            "type": "fixedDialogue",
+            "speaker": "杜甫",
+            "text": "（望着长安城）国破山河在，城春草木深... 我大唐二百年的基业，难道就要断送在这些胡虏手中吗？"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "d4_1",
+          "description": "安顿好家人，独自北上灵武，投奔新帝李亨。",
+          "type": "historical",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "你告别妻儿，踏上北上的路途。途中不幸被叛军俘虏，被押回长安，但你的忠义之心未改，在狱中写下了千古名篇。"
+            }
+          ],
+          "effects": {
+            "fame": 50,
+            "people_support": 10
+          }
+        },
+        {
+          "id": "d4_2",
+          "description": "带着家人隐居鄜州羌村，保全性命，等待局势明朗。",
+          "type": "counterfactual",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "你带着家人在羌村过起了避难生活。虽然免于战火，但你心中始终无法平静，只能用诗歌记录下这乱世的点滴。"
+            }
+          ],
+          "effects": {
+            "fame": 10,
+            "people_support": 0
+          }
+        }
+      ],
+      "nodeIntroForRoles": {
+        "du_fu": {
+          "currentSituation": "长安沦陷在即，你必须立刻做出决定。",
+          "informationConflict": "你想报国，但家人需要你保护。",
+          "playerPressure": "叛军随时可能搜山，每一刻都可能是最后时刻。",
+          "inquiryPurpose": "你需要打探北上的路线是否安全，以及灵武朝廷的真伪。",
+          "playerSituation": "你只是一个微不足道的小官，但你的心却装着整个天下。",
+          "decisionPressure": "家人的性命就在你一念之间。",
+          "stakes": "个人的生死，以及作为一个士人的尊严。"
+        }
+      },
+      "shortContext": "长安沦陷后的混乱与逃亡。",
+      "detailedContext": "潼关失守后，唐玄宗仓皇出逃，长安陷入无政府状态。安禄山叛军入城后大肆抢掠。杜甫将家人安置在鄜州羌村，独自北上寻找朝廷，途中不幸被俘。"
+    },
+    {
+      "id": "node_lingwu_throne",
+      "title": "灵武的新朝",
+      "year": "756年7月",
+      "location": "灵武·行宫",
+      "background": "李亨在灵武即位，遥尊玄宗为太上皇。物资匮乏，人心未定。",
+      "backgroundImage": "lingwu",
+      "conflict": "新朝廷急需确立战略：是先收复两京（长安、洛阳）以安人心，还是先稳固根基？",
+      "playableRoleIds": ["li_heng", "du_fu"],
+      "availableNPCs": [
+        {
+          "npcId": "guo_ziyi",
+          "stanceInThisNode": "主张稳扎稳打，建议借兵回纥，先稳固河北，再图两京。",
+          "knowledgeInThisNode": "知道官军实力不足，知道回纥兵战斗力强，知道借兵的代价。",
+          "relationshipToPlayerRole": {
+            "li_heng": "他是你的擎天白玉柱，你完全依赖他的军事才能。",
+            "du_fu": "他听说过你的诗名，敬重你的气节，愿意在陛下面前为你美言。"
+          },
+          "quickQuestionsByPlayerRole": {
+            "li_heng": [
+              "郭将军，若要收复长安，我们需要多少兵力？国库空虚，军费何出？",
+              "借回纥兵，是否会有引狼入室之虞？",
+              "朕想立刻回銮长安，将军看胜算几何？"
+            ],
+            "du_fu": [
+              "郭将军，如今河北局势如何？叛军主力何在？",
+              "将军，晚生有一策，不知当讲不当讲：是否可联络河北义军，断贼归路？",
+              "将军用人之际，晚生虽不才，愿效犬马之劳。"
+            ]
+          }
+        },
+        {
+          "npcId": "li_bi",
+          "name": "李泌",
+          "identity": "谋臣，白衣山人",
+          "stanceInThisNode": "主张长远规划，建议先疲敌，不急于收复两京，构建大战略包围网。",
+          "knowledgeInThisNode": "洞察天下大势，知道叛军的弱点在于内部不和，知道急于求成的危害。",
+          "relationshipToPlayerRole": {
+            "li_heng": "他是你的师友，你对他言听计从，但他常泼你冷水。",
+            "du_fu": "他欣赏你的才华，认为你是未来的文坛领袖，但此刻更看重实务人才。"
+          },
+          "quickQuestionsByPlayerRole": {
+            "li_heng": [
+              "先生，朕欲速战速决，为何先生总是劝阻？",
+              "父皇在蜀中，朕这皇位...世人究竟怎么看？",
+              "这天下，到底还要乱多久？"
+            ],
+            "du_fu": [
+              "李先生，晚生观史，凡中兴之主，必先收人心。今百姓流离，当如何安抚？",
+              "先生，两京未复，宗庙不安，我们真的不能急吗？",
+              "先生布衣之身，却能定国安邦，晚生佩服。不知晚生能做些什么？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 4,
+      "fixedScript": {
+        "li_heng": [
+          {
+            "type": "narration",
+            "speaker": "旁白",
+            "text": "灵武的行宫简陋得连像样的家具都没有。你坐在硬邦邦的御座上，看着阶下的文武百官——其实不过是一群衣衫褴褛的幸存者。"
+          },
+          {
+            "type": "fixedDialogue",
+            "speaker": "李亨",
+            "text": "朕...不，我大唐的基业，就靠诸位了。朕不想做亡国之君，朕要回长安！"
+          }
+        ],
+        "du_fu": [
+          {
+            "type": "narration",
+            "speaker": "旁白",
+            "text": "你历经千辛万苦，终于逃到了灵武。这里虽然荒凉，但每个人的眼中都燃烧着复仇的火焰。你衣衫褴褛，站在朝堂之上，却感到前所未有的庄严。"
+          },
+          {
+            "type": "fixedDialogue",
+            "speaker": "杜甫",
+            "text": "陛下，臣杜甫...虽无经天纬地之才，但愿以手中之笔，为陛下记录这中兴大业，唤醒天下人心！"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "d5_1",
+          "description": "（李亨）急于求成，下令立刻反攻长安，不惜借兵回纥。",
+          "type": "historical",
+          "roleRestriction": "li_heng",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "你借来回纥兵，虽然收复了长安，但回纥兵在城中大肆劫掠，百姓遭受二茬罪。你的皇位稳固了，但民心却伤了。"
+            }
+          ],
+          "effects": {
+            "military_morale": 60,
+            "people_support": -20
+          }
+        },
+        {
+          "id": "d5_2",
+          "description": "（李亨）采纳李泌建议，稳扎稳打，先取范阳断敌归路。",
+          "type": "counterfactual",
+          "roleRestriction": "li_heng",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "战略部署虽然漫长，但有效削弱了叛军。安禄山内部发生内讧，你兵不血刃收复了部分失地，大唐复兴更有根基。"
+            }
+          ],
+          "effects": {
+            "military_morale": 20,
+            "people_support": 30
+          }
+        },
+        {
+          "id": "d5_3",
+          "description": "（杜甫）进谏，请求皇帝优先安抚流民，整顿吏治。",
+          "type": "historical",
+          "roleRestriction": "du_fu",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "皇帝虽然嘉奖了你的忠心，但认为此刻军事优先。你被授予左拾遗之职，虽然官小，但你终于有了直谏皇帝的机会。"
+            }
+          ],
+          "effects": {
+            "fame": 20,
+            "court_support": 10
+          }
+        },
+        {
+          "id": "d5_4",
+          "description": "（杜甫）投笔从戎，请求去郭子仪幕府做参谋。",
+          "type": "counterfactual",
+          "roleRestriction": "du_fu",
+          "resultScript": [
+            {
+              "type": "decisionResult",
+              "speaker": "系统",
+              "text": "你展现了意想不到的军事洞察力，郭子仪对你刮目相看。你不再是那个只会写诗的文人，而是平叛的功臣之一。"
+            }
+          ],
+          "effects": {
+            "military_morale": 10,
+            "fame": 30
+          }
+        }
+      ],
+      "nodeIntroForRoles": {
+        "li_heng": {
+          "currentSituation": "你刚刚登基，急需一场胜利来证明自己的合法性。",
+          "informationConflict": "理智告诉你应该稳住，但情感和局势逼你速战。",
+          "playerPressure": "父皇在蜀中可能随时发号施令，你必须尽快立威。",
+          "inquiryPurpose": "你需要确认将领们的忠诚度和执行力。",
+          "playerSituation": "你终于不再是唯唯诺诺的太子，但这个皇帝不好当。",
+          "decisionPressure": "如果首战失败，你的皇位可能不保。",
+          "stakes": "大唐的中兴，就在你的一念之间。"
+        },
+        "du_fu": {
+          "currentSituation": "你终于来到了朝廷中枢，虽然这里很简陋。",
+          "informationConflict": "你想做官济世，但你也看到了朝廷内部的微妙关系。",
+          "playerPressure": "作为一个文人，你如何在这个武人当道的时代找到位置？",
+          "inquiryPurpose": "了解新皇帝的志向和朝廷的战略方向。",
+          "playerSituation": "你是一个幸存者，也是一个见证者，更是一个参与者。",
+          "decisionPressure": "你的建议可能会被采纳，也可能让你被边缘化。",
+          "stakes": "实现你毕生的政治抱负。"
+        }
+      },
+      "shortContext": "灵武即位，大唐反击的起点。",
+      "detailedContext": "天宝十五载七月，李亨在灵武即位，改元至德。此时朝廷缺兵少将，不得不依赖朔方军和借兵回纥。杜甫此时在长安沦陷区或逃亡途中，此处为游戏性的汇聚节点。",
+      "glossary": [
+        {
+          "term": "回纥",
+          "definition": "北方游牧民族，此时与唐朝关系尚好，借兵条件苛刻。"
+        }
+      ]
+    }
+  ],
+  "stateSchema": [
+    {
+      "key": "military_morale",
+      "label": "军心",
+      "description": "军队的士气和战斗力。过低会导致哗变或战败。",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 50
+    },
+    {
+      "key": "court_support",
+      "label": "朝望",
+      "description": "在朝廷中的政治支持度。过低会被政敌攻讦或罢免。",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 50
+    },
+    {
+      "key": "people_support",
+      "label": "民心",
+      "description": "百姓和士人的拥护度。影响情报准确性和逃亡时的生存率。",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 50
+    },
+    {
+      "key": "defense_strength",
+      "label": "防务",
+      "description": "城防和战略态势。潼关失守后此项清零。",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 80
+    },
+    {
+      "key": "fame",
+      "label": "文名/声望",
+      "description": "个人名声。对杜甫至关重要，对李亨是软实力。",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 10
+    }
+  ],
+  "defaultState": {
+    "military_morale": 50,
+    "court_support": 50,
+    "people_support": 50,
+    "defense_strength": 80,
+    "fame": 10
+  },
+  "randomEvents": [
+    {
+      "id": "re_plague",
+      "title": "军中瘟疫",
+      "description": "潼关军营中爆发疫病，士兵死亡率上升。",
+      "relatedStateKeys": ["military_morale", "defense_strength"],
+      "probabilityFormulaDescription": "当防务值 > 50 且 节点为潼关时，有20%概率触发。",
+      "successText": "你及时隔离了病患，疫情未大规模扩散。",
+      "failureText": "瘟疫蔓延，死者枕籍，军心大乱。",
+      "successEffects": {
+        "military_morale": -5
+      },
+      "failureEffects": {
+        "military_morale": -20,
+        "defense_strength": -10
+      }
+    },
+    {
+      "id": "re_rumors",
+      "title": "流言四起",
+      "description": "长安城内流传太子即将夺位的流言。",
+      "relatedStateKeys": ["court_support"],
+      "probabilityFormulaDescription": "当节点为马嵬坡或长安时，有15%概率触发。",
+      "successText": "你巧妙地化解了流言，甚至利用它试探了人心。",
+      "failureText": "流言激怒了皇帝，他开始怀疑你的忠诚。",
+      "successEffects": {
+        "court_support": 5
+      },
+      "failureEffects": {
+        "court_support": -15
+      }
+    }
+  ],
+  "endings": [
+    {
+      "id": "end_history_tragedy",
+      "title": "历史的尘埃",
+      "priority": 1,
+      "conditionDescription": "在关键节点选择正史选项，且未能改变大势。",
+      "summary": "你经历了安史之乱的惨痛过程，虽然尽力挣扎，但历史的车轮依旧碾碎了盛世。",
+      "historyComparison": "这与真实历史一致。大唐虽然平定了叛乱，但从此由盛转衰，藩镇割据，再未回到天宝年间的辉煌。",
+      "counterfactualExplanation": "无。",
+      "endingNarration": [
+        {
+          "type": "endingNarration",
+          "speaker": "旁白",
+          "text": "战火终于熄灭，但长安的繁华已成过眼云烟。你站在残破的城墙上，看着夕阳西下。大唐还在，但那个自信、包容、辉煌的大唐，已经埋葬在了马嵬坡的泥土里，消失在潼关的风沙中。你活了下来，但你的一生，都将被这场浩劫所定义。"
+        }
+      ],
+      "backgroundImage": "bad"
+    },
+    {
+      "id": "end_counterfactual_victory",
+      "title": "力挽狂澜",
+      "priority": 10,
+      "conditionDescription": "在潼关选择死守，并在马嵬坡成功保全皇室尊严。",
+      "summary": "你成功守住了潼关，并在政治斗争中保全了大局，大唐避免了最惨痛的损失。",
+      "historyComparison": "历史在这里拐了一个弯。潼关未失，长安未破，大唐的元气得以保存。",
+      "counterfactualExplanation": "哥舒翰的死守策略成功拖垮了安禄山，河北义军切断了叛军归路。虽然内部斗争依然存在，但大唐以较小的代价平定了叛乱，避免了藩镇割据的加剧。",
+      "endingNarration": [
+        {
+          "type": "endingNarration",
+          "speaker": "旁白",
+          "text": "史书记载，天宝十五载，名将哥舒翰力排众议，死守潼关，叛军久攻不下，内乱而亡。大唐王朝在经历了惊心动魄的几个月后，依然屹立在东方。你看着长安城依旧熙攘的街道，知道这盛世的重担，如今落在了你的肩上。"
+        }
+      ],
+      "backgroundImage": "good"
+    },
+    {
+      "id": "end_personal_survival",
+      "title": "乱世浮萍",
+      "priority": 5,
+      "conditionDescription": "玩家选择保全个人或家族，未参与核心政治斗争。",
+      "summary": "你放弃了权力和名声，选择了在乱世中苟全性命。",
+      "historyComparison": "这是大多数普通人的选择。历史由大人物书写，但由小人物承受。",
+      "counterfactualExplanation": "你避开了政治漩涡，虽然未能改变历史，但你保住了自己和家人的性命。",
+      "endingNarration": [
+        {
+          "type": "endingNarration",
+          "speaker": "旁白",
+          "text": "多年以后，当战火平息，你坐在乡间的茅屋里，给孙辈讲述当年的故事。你见过盛世的牡丹，也闻过马嵬坡的血腥。你是一个幸存者，这本身就是一种胜利。"
+        }
+      ],
+      "backgroundImage": "street"
+    }
+  ]
+}

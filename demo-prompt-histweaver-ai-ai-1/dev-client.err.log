@@ -1,0 +1,93 @@
+[2m11:01:01[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m11:01:01[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m11:01:10[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m11:01:10[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m11:38:22[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m11:38:22[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:10:55[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:10:55[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:10:58[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:44[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:47[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:47[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:48[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:48[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:48[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:49[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:49[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:50[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:50[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:50[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:50[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:54[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:11:54[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:14:41[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:19:03[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:19:03[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/configs[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:19:19[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:26:07[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:26:15[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:26:16[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m12:26:17[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/pipeline/generate-stream[39m
+Error: connect ECONNREFUSED 127.0.0.1:8790
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)

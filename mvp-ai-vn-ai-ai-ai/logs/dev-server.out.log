@@ -1,0 +1,21 @@
+
+> chaos-echoes-anshi-vn@0.1.0 dev
+> concurrently "npm:dev:client" "npm:dev:server"
+
+[dev:client] 
+[dev:client] > chaos-echoes-anshi-vn@0.1.0 dev:client
+[dev:client] > vite --host 0.0.0.0
+[dev:client] 
+[dev:server] 
+[dev:server] > chaos-echoes-anshi-vn@0.1.0 dev:server
+[dev:server] > node --watch server/index.js
+[dev:server] 
+[dev:server] VN chat API listening on http://localhost:8787
+[dev:client] 
+[dev:client]   [32m[1mVITE[22m v6.4.2[39m  [2mready in [0m[1m678[22m[2m[0m ms[22m
+[dev:client] 
+[dev:client]   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[dev:client]   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.163.1:[1m5173[22m/[39m
+[dev:client]   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.145.1:[1m5173[22m/[39m
+[dev:client]   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.10.150:[1m5173[22m/[39m
+[dev:server] Failed running 'server/index.js'. Waiting for file changes before restarting...

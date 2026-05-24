@@ -1,0 +1,979 @@
+{
+  "id": "an_shi_rebellion_crisis",
+  "title": "天宝惊变：盛世崩塌",
+  "period": "唐朝天宝十四载（755年）",
+  "intro": "开元盛世的余晖尚未散去，边镇节度使安禄山起兵造反。你将置身于这场大变局，体验权力、军心、亲情与求生之间的残酷拉扯。",
+  "theme": "盛世危机与人性抉择",
+  "assets": {
+    "coverImage": "",
+    "defaultBackground": "",
+    "sceneBackgrounds": {},
+    "portraits": {},
+    "endingBackgrounds": {}
+  },
+  "timeline": [
+    {
+      "id": "timeline_1",
+      "year": "755年11月",
+      "title": "安禄山起兵",
+      "description": "安禄山以诛杨国忠为名，在范阳起兵造反。",
+      "location": "范阳",
+      "importance": 5
+    },
+    {
+      "id": "timeline_2",
+      "year": "755年12月",
+      "title": "洛阳陷落",
+      "description": "叛军势如破竹，攻陷东都洛阳。",
+      "location": "洛阳",
+      "importance": 4
+    },
+    {
+      "id": "timeline_3",
+      "year": "756年6月",
+      "title": "潼关失守",
+      "description": "哥舒翰被迫出关迎敌，二十万大军全军覆没。",
+      "location": "潼关",
+      "importance": 5
+    },
+    {
+      "id": "timeline_4",
+      "year": "756年6月",
+      "title": "马嵬坡之变",
+      "description": "禁军哗变，诛杀杨国忠，逼迫玄宗赐死杨贵妃。",
+      "location": "马嵬驿",
+      "importance": 5
+    },
+    {
+      "id": "timeline_5",
+      "year": "756年7月",
+      "title": "灵武即位",
+      "description": "太子李亨在灵武即位，尊玄宗为太上皇。",
+      "location": "灵武",
+      "importance": 4
+    }
+  ],
+  "roles": [
+    {
+      "id": "emperor",
+      "name": "李隆基",
+      "identity": "大唐天子",
+      "goal": "维持皇位尊严，保全爱妃，平定叛乱。",
+      "dilemma": "信任奸佞导致局势失控，在逃亡中面临亲情与权力的撕裂。",
+      "visibleInfo": "安禄山反叛，前线战报混乱，朝廷内部意见分歧。",
+      "hiddenMotivation": "不愿承认自己晚年昏聩，试图维持盛世的幻象。",
+      "portraitImage": "",
+      "initialStateModifiers": {
+        "courtTrust": 80,
+        "militaryMorale": 60
+      },
+      "playableNodeIds": [
+        "node_1",
+        "node_3",
+        "node_5"
+      ],
+      "routeDescription": "天子视角：从盲目自信到仓皇出逃，体验权力的脆弱。"
+    },
+    {
+      "id": "concubine",
+      "name": "杨玉环",
+      "identity": "贵妃",
+      "goal": "在这场政治风暴中生存，保护家族与爱人。",
+      "dilemma": "被视为红颜祸水，家族背负骂名，生死不由自主。",
+      "visibleInfo": "皇帝日渐衰老焦虑，朝中对杨家怨恨极深。",
+      "hiddenMotivation": "对政治无野心，只求安稳，却身不由己。",
+      "portraitImage": "",
+      "initialStateModifiers": {
+        "personalSafety": 70,
+        "courtTrust": 40
+      },
+      "playableNodeIds": [
+        "node_1",
+        "node_3",
+        "node_4"
+      ],
+      "routeDescription": "贵妃视角：盛世荣宠下的危机，从云端跌落泥潭。"
+    },
+    {
+      "id": "general",
+      "name": "哥舒翰",
+      "identity": "兵马副元帅",
+      "goal": "守住潼关，保存实力，避免成为政治斗争牺牲品。",
+      "dilemma": "皇帝催战，敌强我弱，出关必败，守关被疑。",
+      "visibleInfo": "潼关守军士气低落，叛军精锐，朝廷催促决战。",
+      "hiddenMotivation": "深知杨国忠陷害自己，想保全性命但无奈被裹挟。",
+      "portraitImage": "",
+      "initialStateModifiers": {
+        "militaryMorale": 50,
+        "publicOrder": 40
+      },
+      "playableNodeIds": [
+        "node_2"
+      ],
+      "routeDescription": "名将视角：忠君与保军的矛盾，被逼入绝境的悲歌。"
+    },
+    {
+      "id": "soldier",
+      "name": "王二",
+      "identity": "禁军士兵",
+      "goal": "在战乱中活命，为兄弟们讨个说法。",
+      "dilemma": "饥饿疲惫，长官克扣粮饷，对朝廷失望透顶。",
+      "visibleInfo": "护送皇帝逃亡，粮草短缺，士兵怨气冲天。",
+      "hiddenMotivation": "对杨国忠恨之入骨，想借机改变命运。",
+      "portraitImage": "",
+      "initialStateModifiers": {
+        "militaryMorale": 30,
+        "personalSafety": 50
+      },
+      "playableNodeIds": [
+        "node_2",
+        "node_4",
+        "node_5"
+      ],
+      "routeDescription": "士兵视角：底层视角的愤怒与求生，见证哗变。"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "yang_guozhong",
+      "name": "杨国忠",
+      "identity": "宰相",
+      "globalStance": "主战派，利用权势排除异己，对安禄山持强硬态度。",
+      "personality": "贪婪、狡诈、极度自私，缺乏政治远见。",
+      "knowledgeBoundary": "知道朝廷财政空虚，但隐瞒实情；知道安禄山必反，但未料如此之快。",
+      "portraitImage": "",
+      "promptProfileKey": "profile_yang_guozhong"
+    },
+    {
+      "id": "an_lushan",
+      "name": "安禄山",
+      "identity": "三镇节度使",
+      "globalStance": "反叛者，利用朝廷矛盾积蓄力量。",
+      "personality": "外表憨厚，实则阴险狡诈，野心勃勃。",
+      "knowledgeBoundary": "掌握边镇精锐兵力，深知朝廷防务空虚。",
+      "portraitImage": "",
+      "promptProfileKey": "profile_an_lushan"
+    },
+    {
+      "id": "li_heng",
+      "name": "李亨",
+      "identity": "太子",
+      "globalStance": "隐忍待变，试图借乱局摆脱父皇控制，夺回权力。",
+      "personality": "谨慎、隐忍、内心压抑，关键时刻果断。",
+      "knowledgeBoundary": "知道父皇对自己防备，了解禁军对杨家不满。",
+      "portraitImage": "",
+      "promptProfileKey": "profile_li_heng"
+    },
+    {
+      "id": "chen_xuanli",
+      "name": "陈玄礼",
+      "identity": "禁军统领",
+      "globalStance": "保皇派，忠诚于李隆基，但痛恨杨国忠误国。",
+      "personality": "刚正不阿，忠诚勇猛，体恤士卒。",
+      "knowledgeBoundary": "掌握禁军实权，知道士兵哗变风险，不知太子具体计划。",
+      "portraitImage": "",
+      "promptProfileKey": "profile_chen_xuanli"
+    },
+    {
+      "id": "scout_messenger",
+      "name": "斥候信使",
+      "identity": "前线传令兵",
+      "globalStance": "中立，只负责传递情报，恐惧战争。",
+      "personality": "惊慌失措，疲惫不堪，唯命是从。",
+      "knowledgeBoundary": "只看到局部战况，不知道高层决策。",
+      "portraitImage": "",
+      "promptProfileKey": "profile_scout"
+    },
+    {
+      "id": "local_official",
+      "name": "地方县令",
+      "identity": "沿途官员",
+      "globalStance": "自保，试图在乱世中维持秩序或逃跑。",
+      "personality": "圆滑、畏惧权贵、欺软怕硬。",
+      "knowledgeBoundary": "知道本地粮草储备，不知大军行踪。",
+      "portraitImage": "",
+      "promptProfileKey": "profile_official"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node_1",
+      "title": "盛世惊雷",
+      "year": "755年11月",
+      "location": "长安兴庆宫",
+      "background": "安禄山反叛的消息传回长安，朝野震惊。杨国忠坚称这是谣言，而前线告急文书却雪片般飞来。",
+      "conflict": "杨国忠试图掩盖真相，而真相却无法被掩盖。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "emperor",
+        "concubine"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "yang_guozhong",
+          "stanceInThisNode": "极力淡化叛乱严重性，试图安抚皇帝，同时借机铲除异己。",
+          "knowledgeInThisNode": "知道安禄山确实反了，但不知道具体兵力；隐瞒了河北防线崩溃的事实。",
+          "relationshipToPlayerRole": {
+            "emperor": "表忠心，利用皇帝信任把持朝政",
+            "concubine": "依赖堂妹裙带关系，试图拉拢"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "emperor": [
+              "安禄山真的反了吗？你有何凭据？",
+              "前线战况究竟如何？朕要听实话。"
+            ],
+            "concubine": [
+              "哥哥，外面传言是真的吗？",
+              "我们杨家会不会有危险？"
+            ]
+          }
+        },
+        {
+          "npcId": "scout_messenger",
+          "stanceInThisNode": "极度恐惧，只想如实汇报保命，不敢触怒权贵。",
+          "knowledgeInThisNode": "亲眼所见安禄山大军南下，不知道朝廷内部斗争。",
+          "relationshipToPlayerRole": {
+            "emperor": "敬畏，不敢直视天颜",
+            "concubine": "陌生，只知是贵妃"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "emperor": [
+              "你亲眼看到安禄山的旗帜了吗？",
+              "河北各郡现在情况如何？"
+            ],
+            "concubine": [
+              "士兵们都在说什么？",
+              "路上还好走吗？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "emperor": [
+          {
+            "id": "script_1_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "梨园的乐声掩盖不住窗外的风声，一份加急军报打破了沉寂。"
+          },
+          {
+            "id": "script_1_2",
+            "type": "fixedDialogue",
+            "speakerName": "杨国忠",
+            "text": "陛下，这只是安禄山为了邀宠的虚张声势，不必惊慌。"
+          }
+        ],
+        "concubine": [
+          {
+            "id": "script_1_3",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "你看着陛下紧锁的眉头，感到一阵莫名的不安。"
+          },
+          {
+            "id": "script_1_4",
+            "type": "fixedDialogue",
+            "speakerName": "杨国忠",
+            "text": "贵妃妹妹放心，有我在，翻不起什么大浪。"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_1_1",
+          "text": "立即派兵镇压，严令边将死守",
+          "description": "正视危机，调动中央军与边镇对抗。",
+          "type": "historical",
+          "allowedRoleIds": [
+            "emperor"
+          ],
+          "stateEffects": {
+            "militaryMorale": 10,
+            "courtTrust": -5
+          },
+          "nextNodeId": "node_2",
+          "randomEventId": "",
+          "historicalExplanation": "历史上玄宗初期轻敌，导致错失防御良机。",
+          "resultScript": [
+            {
+              "id": "result_1_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "你下令调兵，但朝廷久疏战阵，指挥体系混乱。"
+            }
+          ]
+        },
+        {
+          "id": "decision_1_2",
+          "text": "暂且观望，相信安禄山不敢造次",
+          "description": "被盛世幻象蒙蔽，错失备战窗口。",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "emperor"
+          ],
+          "stateEffects": {
+            "militaryMorale": -10,
+            "courtTrust": 5
+          },
+          "nextNodeId": "node_2",
+          "randomEventId": "",
+          "historicalExplanation": "反事实：若玄宗更昏聩，局势将更不可收拾。",
+          "resultScript": [
+            {
+              "id": "result_1_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "你选择了相信，但恐惧的种子已在心中种下。"
+            }
+          ]
+        },
+        {
+          "id": "decision_1_3",
+          "text": "劝陛下早做准备，安抚人心",
+          "description": "利用影响力促使皇帝正视危机。",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "concubine"
+          ],
+          "stateEffects": {
+            "courtTrust": 10,
+            "personalSafety": -5
+          },
+          "nextNodeId": "node_2",
+          "randomEventId": "",
+          "historicalExplanation": "反事实：若贵妃有政治头脑，或许能延缓危机。",
+          "resultScript": [
+            {
+              "id": "result_1_3",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "你的话让陛下稍有动摇，但杨国忠却对你投来不满的目光。"
+            }
+          ]
+        },
+        {
+          "id": "decision_1_4",
+          "text": "不问政事，继续为陛下以此解忧",
+          "description": "明哲保身，维持现状。",
+          "type": "historical",
+          "allowedRoleIds": [
+            "concubine"
+          ],
+          "stateEffects": {
+            "courtTrust": -10,
+            "personalSafety": 5
+          },
+          "nextNodeId": "node_2",
+          "randomEventId": "",
+          "historicalExplanation": "历史上杨贵妃不涉朝政，但也因此成为替罪羊。",
+          "resultScript": [
+            {
+              "id": "result_1_4",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "你选择了沉默，但这并不能阻止风暴的来临。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "emperor": {
+          "currentSituation": "安禄山反叛的消息令你震惊，但杨国忠信誓旦旦。",
+          "informationConflict": "杨国忠说是小题大做，前线军报却说势如破竹。",
+          "playerPressure": "必须在安抚人心和备战之间做出选择。",
+          "inquiryPurpose": "弄清前线真实战况，判断杨国忠是否欺瞒。",
+          "playerSituation": "身处深宫，信息被层层过滤。",
+          "decisionPressure": "若判断失误，大唐江山危矣。",
+          "stakes": "皇位稳固与国家安危。"
+        },
+        "concubine": {
+          "currentSituation": "宫中气氛诡异，陛下心神不宁，哥哥神色慌张。",
+          "informationConflict": "哥哥说没事，但宫女太监们都在窃窃私语。",
+          "playerPressure": "作为杨家核心，你的命运与局势绑定。",
+          "inquiryPurpose": "了解家族是否面临危险，是否需要劝陛下。",
+          "playerSituation": "深居后宫，对外界危机感知迟钝。",
+          "decisionPressure": "说错话可能惹怒陛下，不说可能全家遭殃。",
+          "stakes": "家族荣耀与个人生死。"
+        }
+      },
+      "shortContext": "长安城内歌舞升平，河北前线烽火连天。",
+      "detailedContext": "天宝十四载冬，安禄山以十五万精兵起兵造反。消息传回长安，玄宗不信。",
+      "glossary": [
+        {
+          "term": "节度使",
+          "explanation": "地方军政长官，掌握重兵，安禄山身兼三镇。"
+        }
+      ]
+    },
+    {
+      "id": "node_2",
+      "title": "潼关死地",
+      "year": "756年6月",
+      "location": "潼关前线",
+      "background": "潼关是长安最后的屏障。哥舒翰手握二十万大军，却多是市井之徒。朝廷不断催促出关决战。",
+      "conflict": "坚守不出可保关隘，但会被视为抗命；出关决战必败无疑。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "general",
+        "soldier"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "yang_guozhong",
+          "stanceInThisNode": "怀疑哥舒翰拥兵自重，极力催促出兵，甚至进谗言。",
+          "knowledgeInThisNode": "知道哥舒翰按兵不动，不知道敌军实力；隐瞒了催战是出于私心。",
+          "relationshipToPlayerRole": {
+            "general": "政敌，想借刀杀人除掉威胁",
+            "soldier": "草芥，根本不放在眼里"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "general": [
+              "宰相为何屡次催促出兵？是何居心？",
+              "若出师不利，朝廷谁来负责？"
+            ],
+            "soldier": [
+              "这就是朝廷派来的监军吗？",
+              "我们什么时候能吃顿饱饭？"
+            ]
+          }
+        },
+        {
+          "npcId": "scout_messenger",
+          "stanceInThisNode": "惊恐万状，只想逃离战场。",
+          "knowledgeInThisNode": "看到叛军精锐骑兵，知道己方一触即溃。",
+          "relationshipToPlayerRole": {
+            "general": "畏惧长官，不敢隐瞒军情",
+            "soldier": "同病相怜的底层兄弟"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "general": [
+              "叛军前锋距离此地还有多远？",
+              "敌军士气如何？装备怎样？"
+            ],
+            "soldier": [
+              "兄弟，外面是不是打起来了？",
+              "我们真的要出关送死吗？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "general": [
+          {
+            "id": "script_2_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "圣旨一道道传来，字字句句都在逼你出关赴死。"
+          },
+          {
+            "id": "script_2_2",
+            "type": "fixedDialogue",
+            "speakerName": "斥候",
+            "text": "大帅，叛军铁骑就在关外，此时出关无异于羊入虎口！"
+          }
+        ],
+        "soldier": [
+          {
+            "id": "script_2_3",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "肚子饿得咕咕叫，手里的长矛都握不稳。"
+          },
+          {
+            "id": "script_2_4",
+            "type": "fixedDialogue",
+            "speakerName": "战友",
+            "text": "听说杨国忠那个奸贼又在催大帅出兵了，这不是让我们去死吗？"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_2_1",
+          "text": "抗旨死守，绝不轻易出关",
+          "description": "违抗君命，保全军队，等待战机。",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "general"
+          ],
+          "stateEffects": {
+            "militaryMorale": 20,
+            "courtTrust": -20
+          },
+          "nextNodeId": "node_3",
+          "randomEventId": "",
+          "historicalExplanation": "反事实：若哥舒翰抗命死守，长安或许能多撑些时日。",
+          "resultScript": [
+            {
+              "id": "result_2_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "你按兵不动，朝廷震怒，甚至有人密谋夺你兵权。"
+            }
+          ]
+        },
+        {
+          "id": "decision_2_2",
+          "text": "含泪出关，执行决战命令",
+          "description": "明知必败，也要尽忠。",
+          "type": "historical",
+          "allowedRoleIds": [
+            "general"
+          ],
+          "stateEffects": {
+            "militaryMorale": -30,
+            "courtTrust": 10
+          },
+          "nextNodeId": "node_3",
+          "randomEventId": "",
+          "historicalExplanation": "历史上哥舒翰被迫出关，二十万大军灰飞烟灭。",
+          "resultScript": [
+            {
+              "id": "result_2_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "大军出关，瞬间崩溃，你被叛军俘虏，晚节不保。"
+            }
+          ]
+        },
+        {
+          "id": "decision_2_3",
+          "text": "煽动士兵哗变，逼杀杨国忠",
+          "description": "利用士兵怒火，清君侧。",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "soldier"
+          ],
+          "stateEffects": {
+            "militaryMorale": 10,
+            "publicOrder": -20
+          },
+          "nextNodeId": "node_3",
+          "randomEventId": "",
+          "historicalExplanation": "反事实：若士兵在潼关哗变，局势将更混乱。",
+          "resultScript": [
+            {
+              "id": "result_2_3",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "愤怒的士兵冲向监军大帐，局势彻底失控。"
+            }
+          ]
+        },
+        {
+          "id": "decision_2_4",
+          "text": "服从命令，随大帅出关迎敌",
+          "description": "尽军人天职，哪怕去死。",
+          "type": "historical",
+          "allowedRoleIds": [
+            "soldier"
+          ],
+          "stateEffects": {
+            "militaryMorale": -10,
+            "personalSafety": -30
+          },
+          "nextNodeId": "node_3",
+          "randomEventId": "",
+          "historicalExplanation": "历史上潼关守军被迫出战，死伤殆尽。",
+          "resultScript": [
+            {
+              "id": "result_2_4",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "你随着人流冲出关隘，迎面而来的是如林的刀枪。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "general": {
+          "currentSituation": "二十万乌合之众在你手中，朝廷却逼你决战。",
+          "informationConflict": "你知道敌强我弱，朝廷却认为你拥兵自重。",
+          "playerPressure": "进是死，退也是死，忠义难两全。",
+          "inquiryPurpose": "确认敌情，判断是否有转机。",
+          "playerSituation": "重病缠身，被夹在君命与军情之间。",
+          "decisionPressure": "每一刻的犹豫都在消耗粮草和信任。",
+          "stakes": "长安安危与个人名节。"
+        },
+        "soldier": {
+          "currentSituation": "饥寒交迫，长官们还在争吵不休。",
+          "informationConflict": "听说要出兵，但大家都说那是送死。",
+          "playerPressure": "不想死在战场上，也不想当逃兵被杀。",
+          "inquiryPurpose": "搞清楚到底还要不要命。",
+          "playerSituation": "底层士兵，命如草芥。",
+          "decisionPressure": "跟着大帅走是死，造反也是死。",
+          "stakes": "自己的小命。"
+        }
+      },
+      "shortContext": "潼关危在旦夕，二十万大军命悬一线。",
+      "detailedContext": "哥舒翰深知出关必败，但杨国忠进谗言，玄宗连降圣旨催战。",
+      "glossary": [
+        {
+          "term": "潼关",
+          "explanation": "长安东大门，地势险要，易守难攻。"
+        }
+      ]
+    },
+    {
+      "id": "node_3",
+      "title": "仓皇西狩",
+      "year": "756年6月",
+      "location": "长安至马嵬坡途中",
+      "background": "潼关失守，长安无险可守。玄宗带着皇室宗亲、少数禁军仓皇逃往蜀地。",
+      "conflict": "皇室尊严与生存本能的冲突，饥饿与疲惫引发的不满。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "emperor",
+        "concubine"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "chen_xuanli",
+          "stanceInThisNode": "忠诚但愤怒，对杨国忠恨之入骨，试图维护军纪。",
+          "knowledgeInThisNode": "知道士兵随时可能哗变，不知道太子在暗中策划。",
+          "relationshipToPlayerRole": {
+            "emperor": "忠诚护主，但对现状痛心",
+            "concubine": "同情其遭遇，但认为她是祸根"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "emperor": [
+              "将士们情绪如何？还能撑多久？",
+              "杨国忠现在的行踪在哪里？"
+            ],
+            "concubine": [
+              "陈将军，大家是不是都很恨我？",
+              "我们还要走多久才能安全？"
+            ]
+          }
+        },
+        {
+          "npcId": "li_heng",
+          "stanceInThisNode": "暗中联络禁军，准备借机上位，表现恭顺。",
+          "knowledgeInThisNode": "知道父皇已失人心，知道陈玄礼对杨国忠不满。",
+          "relationshipToPlayerRole": {
+            "emperor": "恭顺隐忍，等待时机",
+            "concubine": "冷漠，视其为政治牺牲品"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "emperor": [
+              "太子，后方追兵情况如何？",
+              "你觉得我们该往哪里去？"
+            ],
+            "concubine": [
+              "殿下，能否让人给我送点水？",
+              "您觉得父皇还能保护我吗？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "emperor": [
+          {
+            "id": "script_3_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "昔日威严的天子，如今只能在颠簸的车驾中叹息。"
+          },
+          {
+            "id": "script_3_2",
+            "type": "fixedDialogue",
+            "speakerName": "陈玄礼",
+            "text": "陛下，将士们饥渴难耐，怨气很大，请陛下示下。"
+          }
+        ],
+        "concubine": [
+          {
+            "id": "script_3_3",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "曾经锦衣玉食，如今却连一口清水都成了奢望。"
+          },
+          {
+            "id": "script_3_4",
+            "type": "fixedDialogue",
+            "speakerName": "宫女",
+            "text": "娘娘，杨国忠大人说粮草不够了，让我们自己想办法。"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_3_1",
+          "text": "严令杨国忠筹粮，安抚将士",
+          "description": "试图平衡局势，维持秩序。",
+          "type": "historical",
+          "allowedRoleIds": [
+            "emperor"
+          ],
+          "stateEffects": {
+            "militaryMorale": -5,
+            "courtTrust": -10
+          },
+          "nextNodeId": "node_4",
+          "randomEventId": "",
+          "historicalExplanation": "历史上玄宗试图安抚，但杨国忠的傲慢激化了矛盾。",
+          "resultScript": [
+            {
+              "id": "result_3_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "杨国忠敷衍了事，士兵们的怒火在沉默中燃烧。"
+            }
+          ]
+        },
+        {
+          "id": "decision_3_2",
+          "text": "处死杨国忠以平民愤",
+          "description": "牺牲亲信，保全大局。",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "emperor"
+          ],
+          "stateEffects": {
+            "militaryMorale": 20,
+            "courtTrust": -30
+          },
+          "nextNodeId": "node_4",
+          "randomEventId": "",
+          "historicalExplanation": "反事实：若玄宗主动杀杨国忠，或许能保住贵妃。",
+          "resultScript": [
+            {
+              "id": "result_3_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "你下令斩杀杨国忠，士兵们欢呼雀跃，但目光仍盯着贵妃。"
+            }
+          ]
+        },
+        {
+          "id": "decision_3_3",
+          "text": "散尽财物犒赏三军",
+          "description": "试图用金钱收买人心。",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "concubine"
+          ],
+          "stateEffects": {
+            "militaryMorale": 10,
+            "personalSafety": 5
+          },
+          "nextNodeId": "node_4",
+          "randomEventId": "",
+          "historicalExplanation": "反事实：若贵妃主动散财，或能缓解敌意。",
+          "resultScript": [
+            {
+              "id": "result_3_3",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "你拿出首饰分给士兵，有人感激，有人冷笑。"
+            }
+          ]
+        },
+        {
+          "id": "decision_3_4",
+          "text": "紧随陛下，不问世事",
+          "description": "完全依赖皇帝的保护。",
+          "type": "historical",
+          "allowedRoleIds": [
+            "concubine"
+          ],
+          "stateEffects": {
+            "militaryMorale": -10,
+            "personalSafety": -10
+          },
+          "nextNodeId": "node_4",
+          "randomEventId": "",
+          "historicalExplanation": "历史上贵妃随行，最终在马嵬坡成为牺牲品。",
+          "resultScript": [
+            {
+              "id": "result_3_4",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "你躲在车中，外面的喊杀声越来越近。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "emperor": {
+          "currentSituation": "逃亡路上，禁军士气低落，随时可能哗变。",
+          "informationConflict": "杨国忠说一切尽在掌握，陈玄礼却说军心不稳。",
+          "playerPressure": "必须解决粮草和士气问题，否则性命难保。",
+          "inquiryPurpose": "了解太子和禁军统领的真实想法。",
+          "playerSituation": "威严扫地，只能依靠禁军保护。",
+          "decisionPressure": "任何决定都可能引发连锁反应。",
+          "stakes": "皇位与性命。"
+        },
+        "concubine": {
+          "currentSituation": "颠簸流离，周围人的眼神越来越冷漠。",
+          "informationConflict": "陛下说会保护我，但士兵们在骂杨国忠。",
+          "playerPressure": "作为杨家人，你感到深深的敌意。",
+          "inquiryPurpose": "想知道还有谁愿意保护自己。",
+          "playerSituation": "弱女子，完全依附于皇权。",
+          "decisionPressure": "任何举动都可能被视为干政。",
+          "stakes": "生死未卜。"
+        }
+      },
+      "shortContext": "天子逃亡，禁军饥疲，杀机四伏。",
+      "detailedContext": "玄宗一行逃至马嵬坡，禁军哗变，诛杀杨国忠，围困驿站。",
+      "glossary": [
+        {
+          "term": "马嵬坡",
+          "explanation": "陕西兴平西北，玄宗逃亡途中的驿站。"
+        }
+      ]
+    },
+    {
+      "id": "node_4",
+      "title": "马嵬惊魂",
+      "year": "756年6月",
+      "location": "马嵬驿",
+      "background": "禁军哗变，杀死杨国忠后，包围驿站，高喊“祸本尚在”。陈玄礼逼迫玄宗处死杨贵妃。",
+      "conflict": "皇帝的尊严与爱情 vs 士兵的愤怒与生存需求。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "soldier",
+        "concubine"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "chen_xuanli",
+          "stanceInThisNode": "代表禁军逼宫，要求处死杨贵妃以平众怒。",
+          "knowledgeInThisNode": "知道如果不杀贵妃，士兵可能会杀皇帝。",
+          "relationshipToPlayerRole": {
+            "soldier": "战友，利用士兵情绪逼宫",
+            "concubine": "必须除掉的目标，但也有一丝怜悯"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "soldier": [
+              "将军，杀了杨国忠就算了吗？",
+              "如果不杀贵妃，我们会怎样？"
+            ],
+            "concubine": [
+              "陈将军，一定要这样吗？我愿削发为尼。",
+              "陛下知道你们的做法吗？"
+            ]
+          }
+        },
+        {
+          "npcId": "li_heng",
+          "stanceInThisNode": "幕后默许，不直接出面，坐收渔利。",
+          "knowledgeInThisNode": "知道这是夺取皇位的最佳时机。",
+          "relationshipToPlayerRole": {
+            "soldier": "可以利用的力量",
+            "concubine": "必须牺牲的棋子"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "soldier": [
+              "殿下，我们这样做对吗？",
+              "接下来我们该听谁的？"
+            ],
+            "concubine": [
+              "太子殿下，求您救救我！",
+              "您也认为我是祸根吗？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "soldier": [
+          {
+            "id": "script_4_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "杨国忠的人头就在脚下，但愤怒的火焰并未熄灭。"
+          },
+          {
+            "id": "script_4_2",
+            "type": "fixedDialogue",
+            "speakerName": "陈玄礼",
+            "text": "贼本尚在！贵妃不除，军心难安！"
+          }
+        ],
+        "concubine": [
+          {
+            "id": "script_4_3",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "外面的喊杀声震耳欲聋，你知道，他们在要你的命。"
+          },
+          {
+            "id": "script_4_4",
+            "type": "fixedDialogue",
+            "speakerName": "李隆基",
+            "text": "玉环，朕...朕护不住你了。"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_4_1",
+          "text": "继续逼宫，不杀贵妃誓不罢休",
+          "description": "彻底清除杨家势力。",
+          "type": "historical",
+          "allowedRoleIds": [
+            "soldier"
+          ],
+          "stateEffects": {
+            "militaryMorale": 30,
+            "publicOrder": -20
+          },
+          "nextNodeId": "node_5",
+          "randomEventId": "",
+          "historicalExplanation": "历史上禁军逼迫玄宗赐死贵妃，局势才稳定。",
+          "resultScript": [
+            {
+              "id": "result_4_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "皇帝无奈下令，贵妃在梨树下自缢，香消玉殒。"
+            }
+          ]
+        },
+        {
+          "id": "decision_4_2",
+          "text": "见好就收，保护皇帝尊严",
+          "description": "既然杀了杨国忠，就不再追究。",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "soldier"
+          ],
+          "stateEffects": {
+            "militaryMorale": -10,
+            "courtTrust": 20
+          },
+          "nextNodeId": "node_5",
+          "randomEventId": "",
+          "historicalExplanation": "反事实：若士兵放过贵妃，玄宗或能重振旗鼓。",
+          "resultScript": [
+            {
+              "id": "result_4_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "你带头放下武器，皇帝感激地看了你一眼。"
+            }
+          ]
+        },
+        {
+          "id": "decision_4_3",
+          "text": "自缢殉国，保全家族与陛下",
+          "description": "主动赴死，平息众怒。",
+          "type": "historical",
+          "allowedRoleIds": [
+            "concubine"
+          ],
+          "stateEffects": {
+            "militaryMorale": 20,
+            "personalSafety": -100

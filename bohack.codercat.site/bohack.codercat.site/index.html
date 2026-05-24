@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>史境 HistWeaver｜3分钟路演</title>
+<style>
+:root{
+  --bg:#080706;--text:#fff3dd;--muted:#c9bba6;--gold:#f5c76a;--line:rgba(245,199,106,.24);
+  --panel:rgba(18,13,9,.76);--panel2:rgba(255,255,255,.055);--red:#bd5a3d;--cyan:#9bd8d4;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+  background:radial-gradient(circle at 15% 8%,rgba(245,199,106,.18),transparent 28%),
+             radial-gradient(circle at 88% 22%,rgba(155,216,212,.10),transparent 30%),
+             radial-gradient(circle at 55% 85%,rgba(189,90,61,.14),transparent 38%),var(--bg);
+  overflow-x:hidden;
+}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(rgba(255,255,255,.024) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.024) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(circle,#000,transparent 78%);pointer-events:none;z-index:0}
+canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+.progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--gold),#fff1b7);z-index:100;box-shadow:0 0 18px rgba(245,199,106,.7)}
+.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:90;width:min(1120px,calc(100% - 28px));display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(8,7,6,.65);backdrop-filter:blur(18px)}
+.brand{font-weight:900}.brand:before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 16px var(--gold);margin-right:10px}
+.nav a{color:var(--muted);text-decoration:none;font-size:13px;margin-left:16px}
+.nav a:hover{color:var(--gold)}
+.deck{position:relative;z-index:1}
+.slide{min-height:100vh;padding:105px 24px 56px;display:flex;align-items:center;justify-content:center;position:relative}
+.inner{width:min(1120px,100%);margin:auto}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.time{display:none}
+.kicker{color:var(--gold);font-weight:900;letter-spacing:.14em;font-size:13px;text-transform:uppercase}
+h1,h2,h3{margin:0;line-height:1.08}
+h1{font-size:clamp(56px,8vw,100px);letter-spacing:-4px;margin-top:8px}
+h2{font-size:clamp(34px,5vw,58px);letter-spacing:-2px}
+h3{font-size:22px}
+p{color:var(--muted);line-height:1.72;font-size:17px}
+.lead{font-size:clamp(20px,2.2vw,28px);color:#fff5df;max-width:880px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:999px;text-decoration:none;color:#1d1308;font-weight:900;background:linear-gradient(135deg,var(--gold),#fff1b8);box-shadow:0 15px 36px rgba(245,199,106,.24);transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.secondary{color:var(--text);background:rgba(255,255,255,.055);border:1px solid var(--line);box-shadow:none}
+.card{padding:22px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));box-shadow:0 20px 70px rgba(0,0,0,.45);transition:.22s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-5px);border-color:rgba(245,199,106,.55)}
+.card p{font-size:15px;margin-bottom:0}
+.num{color:var(--gold);font-size:28px;font-weight:900;margin-bottom:8px}
+.hero-visual{min-height:500px;border-radius:32px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.72)),radial-gradient(circle at 50% 18%,rgba(245,199,106,.2),transparent 36%),linear-gradient(135deg,#312617,#090909 62%);box-shadow:0 24px 80px rgba(0,0,0,.55);position:relative;overflow:hidden}
+.hero-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 10%,rgba(245,199,106,.12) 11%,transparent 12%,transparent 26%,rgba(245,199,106,.08) 27%,transparent 28%);opacity:.8}
+.orbit{position:absolute;inset:42px;border:1px solid rgba(245,199,106,.22);border-radius:50%;transform:rotate(-12deg);animation:float 6s ease-in-out infinite}.orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed rgba(245,199,106,.2);border-radius:50%;inset:38px}.orbit:after{inset:88px}
+.vnbox{position:absolute;left:28px;right:28px;bottom:28px;padding:20px;border:1px solid rgba(245,199,106,.28);border-radius:22px;background:rgba(10,7,5,.78);backdrop-filter:blur(12px)}
+.speaker{color:var(--gold);font-weight:900;margin-bottom:8px}.vntext{color:#fff0d6;line-height:1.65}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px}
+.step{min-height:138px;padding:16px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.045)}
+.step small{color:var(--gold);font-weight:900}.step b{display:block;margin:8px 0}.step span{display:block;color:var(--muted);font-size:13px;line-height:1.55}
+.mockup{border-radius:30px;border:1px solid var(--line);overflow:hidden;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.8)),linear-gradient(135deg,#312719,#0e1113 62%,#1b130e);min-height:520px;box-shadow:0 24px 80px rgba(0,0,0,.55)}
+.mock-scene{height:300px;background:radial-gradient(circle at 30% 10%,rgba(245,199,106,.22),transparent 30%),linear-gradient(135deg,rgba(105,84,47,.8),rgba(20,20,18,.3)),repeating-linear-gradient(120deg,rgba(255,255,255,.05) 0 1px,transparent 1px 14px);position:relative}
+.mock-tag{position:absolute;top:18px;left:18px;border:1px solid var(--line);border-radius:999px;background:rgba(0,0,0,.45);color:var(--gold);padding:8px 12px;font-size:12px;font-weight:900}
+.mock-dialogue{margin:-38px 22px 0;padding:18px;border-radius:22px;border:1px solid rgba(245,199,106,.28);background:rgba(12,9,6,.84);backdrop-filter:blur(12px);position:relative}
+.input-line{margin-top:14px;padding:12px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.12);color:var(--muted);background:rgba(0,0,0,.25)}
+.choices{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.choice{padding:9px 12px;border:1px solid var(--line);border-radius:999px;color:#f8edd9;background:rgba(255,255,255,.05);font-size:13px}
+.shots{display:grid;grid-template-columns:1.18fr .82fr;gap:16px;margin-top:22px}
+.shot{min-height:250px;border:1px solid var(--line);border-radius:24px;overflow:hidden;position:relative;background:rgba(255,255,255,.04);box-shadow:0 20px 70px rgba(0,0,0,.45)}
+.shot.large{min-height:420px}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;filter:saturate(.95) contrast(1.04)}
+.shot:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.18) 45%,rgba(0,0,0,.84))}
+.shot-content{position:absolute;left:0;right:0;bottom:0;padding:20px;z-index:2}
+.shot-content p{font-size:14px;margin:8px 0 0;text-shadow:0 2px 18px #000}
+.shot-col{display:grid;gap:16px}
+.business{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+.biz{padding:18px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.045);min-height:190px}
+.biz b{color:var(--gold)}
+.arch{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+.layer{padding:22px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.045);min-height:220px}.layer b{color:var(--gold)}
+.footer-mark{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:10px 14px;color:var(--muted);background:rgba(255,255,255,.04);margin-bottom:18px}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s}.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes float{0%,100%{transform:rotate(-12deg) translateY(0)}50%{transform:rotate(-12deg) translateY(-14px)}}
+
+    /* final UI polish */
+    html{scroll-snap-type:y proximity}
+    .slide{scroll-snap-align:start}
+    .slide:before{
+      content:"";
+      position:absolute;
+      inset:24px;
+      border-radius:36px;
+      border:1px solid rgba(245,199,106,.055);
+      pointer-events:none;
+    }
+    .time{display:none}
+    .lead{font-weight:650}
+    .card,.step,.biz,.layer,.mockup,.shot,.hero-visual{
+      backdrop-filter:blur(10px);
+    }
+    .btn{letter-spacing:.02em}
+    .btn:after{
+      content:"↗";
+      margin-left:8px;
+      font-size:13px;
+      opacity:.72;
+    }
+    .btn.secondary:after{content:""}
+    .hero-visual{
+      transform:perspective(1200px) rotateY(-4deg);
+    }
+    .hero-visual:hover{
+      transform:perspective(1200px) rotateY(0deg) translateY(-4px);
+      transition:.35s ease;
+    }
+    .flow .step{
+      position:relative;
+      overflow:hidden;
+    }
+    .flow .step:after{
+      content:"";
+      position:absolute;
+      right:-18px;
+      top:50%;
+      width:36px;
+      height:1px;
+      background:linear-gradient(90deg,rgba(245,199,106,.35),transparent);
+    }
+    .flow .step:nth-child(5):after,
+    .flow .step:nth-child(10):after{display:none}
+    .shots{
+      align-items:stretch;
+    }
+    .shot{
+      isolation:isolate;
+      transition:.25s ease;
+    }
+    .shot:hover{
+      transform:translateY(-5px) scale(1.01);
+      border-color:rgba(245,199,106,.55);
+    }
+    .shot-content{
+      background:linear-gradient(180deg,transparent,rgba(0,0,0,.28));
+    }
+    .shot-content h3{
+      color:#fff2cf;
+      text-shadow:0 2px 18px #000;
+    }
+    .business .biz{
+      position:relative;
+      overflow:hidden;
+    }
+    .business .biz:before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:3px;
+      background:linear-gradient(90deg,var(--gold),transparent);
+      opacity:.75;
+    }
+    .business .biz b{
+      display:block;
+      margin-bottom:8px;
+      font-size:18px;
+    }
+    #architecture .layer:nth-child(2){
+      border-color:rgba(245,199,106,.5);
+      background:rgba(245,199,106,.07);
+    }
+    #final{
+      background:
+        radial-gradient(circle at 50% 20%,rgba(245,199,106,.12),transparent 35%),
+        radial-gradient(circle at 50% 110%,rgba(189,90,61,.16),transparent 45%);
+    }
+    .footer-mark{
+      box-shadow:0 0 32px rgba(245,199,106,.09);
+    }
+
+
+    .creator-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-top:22px;
+      padding:8px 13px 8px 8px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.045);
+      color:var(--muted);
+      box-shadow:0 12px 34px rgba(0,0,0,.22);
+      backdrop-filter:blur(10px);
+    }
+    .creator-badge img{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      object-fit:cover;
+      border:1px solid rgba(245,199,106,.45);
+    }
+    .footer-avatar{
+      width:68px;
+      height:68px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid rgba(245,199,106,.75);
+      box-shadow:0 0 34px rgba(245,199,106,.2);
+      margin-bottom:14px;
+    }
+
+@media(max-width:980px){.grid2,.grid3,.shots,.business,.arch{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}h1{letter-spacing:-2px}.slide{padding-top:90px}.hero-visual{transform:none;min-height:420px}.business .biz{min-height:auto}.shot.large{min-height:360px}}
+
+
+/* BoHack fixed QR - always visible */
+.bohack-float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:96;
+  width:220px;
+  padding:12px;
+  border-radius:22px;
+  border:1px solid rgba(245,199,106,.28);
+  background:rgba(11,8,6,.90);
+  box-shadow:0 22px 60px rgba(0,0,0,.42);
+  backdrop-filter:blur(16px);
+}
+.bohack-panel{
+  position:static;
+  width:100%;
+  padding:0;
+  border:none;
+  background:transparent;
+  box-shadow:none;
+  opacity:1;
+  transform:none;
+  pointer-events:auto;
+}
+.bohack-panel img{
+  display:block;
+  width:100%;
+  aspect-ratio:1 / 1;
+  object-fit:contain;
+  border-radius:16px;
+  background:#fff;
+  padding:10px;
+}
+.bohack-panel-title{
+  margin:0 0 10px 0;
+  color:#fff2cf;
+  font-size:16px;
+  font-weight:800;
+}
+.bohack-panel-desc{
+  margin:8px 0 0 0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.55;
+}
+.bohack-panel-link{
+  display:block;
+  margin-top:8px;
+  color:var(--gold);
+  font-size:12px;
+  text-decoration:none;
+  word-break:break-all;
+}
+.bohack-trigger{display:none}
+.bohack-dot{display:none}
+.bohack-trigger-text{display:none}
+@media(max-width:980px){
+  .bohack-float{
+    right:12px;
+    bottom:12px;
+    width:180px;
+    padding:10px;
+  }
+}
+
+
+</style>
+</head>
+<body>
+<canvas id="particles"></canvas><div class="progress" id="progress"></div>
+
+<div class="bohack-float" id="bohackFloat">
+  <div class="bohack-panel">
+    <p class="bohack-panel-title">BoHack</p>
+    <img src="assets/bohack-qr.png" alt="bohack.codercat.site 二维码">
+    <a class="bohack-panel-link" href="https://bohack.codercat.site" target="_blank" rel="noopener">bohack.codercat.site</a>
+    <p class="bohack-panel-desc">始终显示，方便现场扫码访问。</p>
+  </div>
+</div>
+<nav class="nav"><div class="brand">史境 HistWeaver</div><div class="nav-links"><a href="#problem">问题</a><a href="#pipeline">流水线</a><a href="#demo">Demo</a><a href="#business">商业</a><a href="#architecture">架构</a></div></nav>
+<main class="deck">
+<section class="slide" id="hero"><div class="inner grid2"><div class="reveal"><div class="kicker">AI 历史互动叙事生成流水线</div><h1>史境<br>HistWeaver</h1><p class="lead">让历史不再只是被讲述，而是可以被进入、被对话、被选择、被重新理解。</p><p>我们用 AI 把历史事件转化为可玩的互动视觉小说，让用户以历史人物身份进入现场，与不同立场的角色对话，在有限信息中做选择，并走向正史或合理的非正史结局。</p><div class="btns"><a class="btn" href="https://demo.codercat.site" target="_blank">体验安史之乱 Demo</a><a class="btn secondary" href="https://gamefac.codercat.site" target="_blank">进入总工作台</a></div><div class="creator-badge"><img src="assets/avatar.png" alt="CoderCat 头像"><span>Created by CoderCat</span></div></div><div class="hero-visual reveal"><div class="orbit"></div><div class="vnbox"><div class="speaker">历史现场 · 决策前夜</div><div class="vntext">你听到了三种不同说法。有人催你立刻行动，有人劝你稳住局面，还有人可能隐藏了真正风险。</div></div></div></div></section>
+<section class="slide" id="problem"><div class="inner reveal"><h2>历史被展示了，<br>但很少被真正“进入”</h2><div class="grid3" style="margin-top:28px"><div class="card"><div class="num">01</div><h3>单向讲解</h3><p>展板和讲解能告诉用户发生了什么，却很难让用户进入人物处境。</p></div><div class="card"><div class="num">02</div><h3>人物标签化</h3><p>历史人物常被压缩成结论，真实选择中的恐惧、误判和无奈被消解。</p></div><div class="card"><div class="num">03</div><h3>互动太浅</h3><p>很多文旅互动停留在问答、打卡和解谜，缺少真正的历史推演。</p></div></div></div></section>
+<section class="slide" id="solution"><div class="inner grid2"><div class="reveal"><h2>把历史事件变成<br>可玩的决策现场</h2><p class="lead">史境不是单个历史小游戏，而是一套历史互动叙事生成流水线。</p><p>它把一个历史事件拆解为正史时间线、关键节点、可选角色、人物立场、剧情脚本、AI 对话、决策分支、状态变量和多结局规则。</p></div><div class="card reveal"><h3>输入历史事件</h3><p>安史之乱、赤壁之战、玄武门之变、靖康之变、戊戌变法……</p><div style="height:1px;background:var(--line);margin:20px 0"></div><h3>输出互动游戏</h3><p>带背景图、对话框、有限询问、关键选择和多结局的视觉小说体验。</p></div></div></section>
+<section class="slide" id="pipeline"><div class="inner reveal"><h2>从历史事件到互动游戏，<br>只需要一套结构化流水线</h2><div class="flow"><div class="step"><small>01</small><b>输入事件</b><span>历史主题与资料</span></div><div class="step"><small>02</small><b>正史时间线</b><span>真实历史骨架</span></div><div class="step"><small>03</small><b>关键节点</b><span>抽取可决策点</span></div><div class="step"><small>04</small><b>可选角色</b><span>目标与局限</span></div><div class="step"><small>05</small><b>剧情脚本</b><span>旁白与台词</span></div><div class="step"><small>06</small><b>AI Prompt</b><span>信息边界与口吻</span></div><div class="step"><small>07</small><b>决策规则</b><span>状态变量变化</span></div><div class="step"><small>08</small><b>多结局</b><span>正史与反事实</span></div><div class="step"><small>09</small><b>视觉小说</b><span>渲染为游戏</span></div><div class="step"><small>10</small><b>流式生成</b><span>更快看到剧情与配置</span></div></div></div></section>
+<section class="slide" id="experience"><div class="inner grid2"><div class="reveal"><h2>玩家不是旁观者，<br>而是局中人</h2><div class="grid2" style="gap:14px;margin-top:24px"><div class="card"><h3>选择角色</h3><p>以不同历史人物身份进入事件。</p></div><div class="card"><h3>阅读局势</h3><p>理解地点、时间、矛盾和压力。</p></div><div class="card"><h3>有限询问</h3><p>在关键决策前向 NPC 提问。</p></div><div class="card"><h3>做出选择</h3><p>在不完整信息下承担后果。</p></div></div></div><div class="mockup reveal"><div class="mock-scene"><div class="mock-tag">剩余询问次数：2 / 3</div></div><div class="mock-dialogue"><div class="speaker">当前人物</div><div class="vntext">你现在要做的，不只是保住一个人。你要判断谁说的是实话，谁在推卸责任，哪一步会把局势推向更坏的地方。</div><div class="input-line">输入你想问的问题……</div><div class="choices"><span class="choice">继续询问</span><span class="choice">结束询问</span><span class="choice">做出决策</span></div></div></div></div></section>
+<section class="slide" id="demo"><div class="inner reveal"><h2>示例 Demo：安史之乱</h2><p>安史之乱只是第一个样例，用来展示流水线如何把历史事件转化为互动视觉小说。</p><div class="shots"><div class="shot large"><img src="assets/demo/demo-hero.jpg" alt=""><div class="shot-content"><h3>游戏首页</h3><p>用户进入安史之乱场景，选择模式并开始体验。</p></div></div><div class="shot-col"><div class="shot"><img src="assets/demo/role-select.jpg" alt=""><div class="shot-content"><h3>角色选择</h3><p>不同历史人物拥有不同目标、处境和信息边界。</p></div></div><div class="shot"><img src="assets/demo/inquiry-panel.jpg" alt=""><div class="shot-content"><h3>决策前询问</h3><p>玩家向不同立场角色提问，再做出关键选择。</p></div></div></div></div><div class="btns"><a class="btn" href="https://demo.codercat.site" target="_blank">打开安史之乱 Demo</a></div></div></section>
+<section class="slide" id="workspace"><div class="inner grid2"><div class="reveal"><h2>总工作台：真正的生成入口</h2><p>总工作台用于管理不同历史事件的配置、角色、节点、剧情脚本、图片素材和运行入口。</p><div class="btns"><a class="btn" href="https://gamefac.codercat.site" target="_blank">进入总工作台</a></div></div><div class="shot large reveal"><img src="assets/demo/workspace.jpg" alt=""><div class="shot-content"><h3>历史事件生成工作台</h3><p>从历史事件输入到结构化生成，服务更多文旅和教育场景。</p></div></div></div></section>
+<section class="slide" id="business"><div class="inner reveal"><h2>商业价值：从一次性讲解，<br>变成可复用互动产品</h2><div class="business"><div class="biz"><b>目标客户</b><p>博物馆、历史文化景区、研学机构、学校历史教育、地方文旅 IP 项目。</p></div><div class="biz"><b>交付形式</b><p>网页 H5、展厅互动屏、文旅小程序、研学课程任务、地方历史互动故事。</p></div><div class="biz"><b>商业模式</b><p>短期 B 端定制交付；中期工作台 SaaS；长期沉淀历史互动内容平台。</p></div><div class="biz"><b>核心优势</b><p>比普通导览更有参与感，比历史问答更有游戏性，比单个定制游戏更容易复用。</p></div></div></div></section>
+<section class="slide" id="architecture"><div class="inner reveal"><h2>技术架构：Config 驱动的历史游戏运行器</h2><div class="arch"><div class="layer"><b>历史内容层</b><p>时间线、人物、节点、术语、资料。</p></div><div class="layer"><b>叙事配置层</b><p>HistoricalGameConfig、角色路线、剧情脚本、决策规则。</p></div><div class="layer"><b>AI 交互层</b><p>NPC Prompt、信息边界、有限自由询问、Mock 兜底。</p></div><div class="layer"><b>视觉小说运行器</b><p>背景图、对话框、状态面板、选择分支、多结局展示。</p></div></div></div></section>
+<section class="slide" id="final"><div class="inner reveal" style="text-align:center"><img class="footer-avatar" src="assets/avatar.png" alt="CoderCat 头像"><br><div class="footer-mark">Created by CoderCat</div><h2>让历史成为<br>可以进入的现场</h2><p class="lead" style="margin-left:auto;margin-right:auto">进入人物处境，在选择中理解时代，在对话中感受文明，在推演中重新认识过去。</p><div class="btns" style="justify-content:center"><a class="btn" href="https://demo.codercat.site" target="_blank">体验安史之乱 Demo</a><a class="btn secondary" href="https://gamefac.codercat.site" target="_blank">进入总工作台</a></div></div></section>
+</main>
+<script>
+const progress=document.getElementById('progress');addEventListener('scroll',()=>{const d=document.documentElement,t=d.scrollHeight-d.clientHeight;progress.style.width=(t>0?d.scrollTop/t*100:0)+'%'});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.16});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');let ps=[];function resize(){canvas.width=innerWidth;canvas.height=innerHeight;const n=Math.min(90,Math.floor(innerWidth/18));ps=Array.from({length:n},()=>({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.8+.4,vx:(Math.random()-.5)*.18,vy:Math.random()*-.24-.04,a:Math.random()*.45+.12}))}addEventListener('resize',resize);resize();function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.y<-10)p.y=canvas.height+10;if(p.x<-10)p.x=canvas.width+10;if(p.x>canvas.width+10)p.x=-10;ctx.beginPath();ctx.fillStyle=`rgba(245,199,106,${p.a})`;ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()});requestAnimationFrame(draw)}draw();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1432 @@
+{
+  "id": "xuanwu_gate_coup",
+  "title": "玄武门之变",
+  "period": "唐朝武德九年（626年）",
+  "intro": "秦王李世民功高震主，太子李建成联合齐王李元吉欲除之。六月四日，李世民于玄武门伏兵，射杀太子与齐王，逼父退位，开创贞观之治。",
+  "theme": "权力与亲情的终极博弈",
+  "assets": {
+    "coverImage": "",
+    "defaultBackground": "",
+    "sceneBackgrounds": {},
+    "portraits": {},
+    "endingBackgrounds": {}
+  },
+  "timeline": [
+    {
+      "id": "timeline_1",
+      "year": "618年",
+      "title": "唐朝建立",
+      "description": "李渊称帝，建都长安，封李世民为秦王。",
+      "location": "长安",
+      "importance": 5
+    },
+    {
+      "id": "timeline_2",
+      "year": "621年",
+      "title": "虎牢关大捷",
+      "description": "李世民一战擒双王，功勋盖世，封天策上将。",
+      "location": "虎牢关",
+      "importance": 5
+    },
+    {
+      "id": "timeline_3",
+      "year": "624年",
+      "title": "太子党成型",
+      "description": "李建成联合李元吉，在后宫与朝堂打压秦王府。",
+      "location": "长安",
+      "importance": 4
+    },
+    {
+      "id": "timeline_4",
+      "year": "626年六月三日",
+      "title": "密谋定计",
+      "description": "李世民入宫密奏，指控太子淫乱后宫，李渊许诺次日对质。",
+      "location": "太极宫",
+      "importance": 5
+    },
+    {
+      "id": "timeline_5",
+      "year": "626年六月四日",
+      "title": "玄武门之变",
+      "description": "李世民伏兵玄武门，射杀太子与齐王，掌控朝局。",
+      "location": "玄武门",
+      "importance": 5
+    }
+  ],
+  "roles": [
+    {
+      "id": "li_shimin",
+      "name": "李世民",
+      "identity": "秦王、天策上将",
+      "goal": "夺取皇位，开创盛世",
+      "dilemma": "功高震主，不反则死，反则背负弑兄之名",
+      "visibleInfo": "掌握军权，天策府谋士众多",
+      "hiddenMotivation": "深信唯有自己能平定天下，兄长无能",
+      "portraitImage": "",
+      "initialStateModifiers": {
+        "military_support": 80,
+        "court_influence": 40
+      },
+      "playableNodeIds": [
+        "node_1",
+        "node_3",
+        "node_5"
+      ],
+      "routeDescription": "权力路线：从被动防守到主动出击"
+    },
+    {
+      "id": "li_jiancheng",
+      "name": "李建成",
+      "identity": "太子",
+      "goal": "保住储君之位，铲除秦王威胁",
+      "dilemma": "名分已定但功勋不足，弟弟功高盖主",
+      "visibleInfo": "皇帝支持，后宫势力庞大",
+      "hiddenMotivation": "恐惧弟弟的野心，担忧自身安危",
+      "portraitImage": "",
+      "initialStateModifiers": {
+        "court_influence": 70,
+        "emperor_trust": 60
+      },
+      "playableNodeIds": [
+        "node_2",
+        "node_4"
+      ],
+      "routeDescription": "守成路线：维护正统与自保"
+    },
+    {
+      "id": "li_yuanji",
+      "name": "李元吉",
+      "identity": "齐王",
+      "goal": "助太子除秦王，谋取更大权力",
+      "dilemma": "依附太子，但自身实力不足",
+      "visibleInfo": "掌握部分禁军，与太子结盟",
+      "hiddenMotivation": "欲借太子之手除秦王，再图太子之位",
+      "portraitImage": "",
+      "initialStateModifiers": {
+        "military_support": 30,
+        "crisis_level": 40
+      },
+      "playableNodeIds": [
+        "node_2",
+        "node_4"
+      ],
+      "routeDescription": "投机路线：借力打力"
+    },
+    {
+      "id": "zhangsun_wuji",
+      "name": "长孙无忌",
+      "identity": "秦王府谋士",
+      "goal": "辅佐李世民登基",
+      "dilemma": "忠于秦王，但不愿背负乱臣之名",
+      "visibleInfo": "秦王心腹，掌握情报网络",
+      "hiddenMotivation": "家族荣辱系于秦王成败",
+      "portraitImage": "",
+      "initialStateModifiers": {
+        "court_influence": 30,
+        "crisis_level": 60
+      },
+      "playableNodeIds": [
+        "node_1",
+        "node_3",
+        "node_5"
+      ],
+      "routeDescription": "谋士路线：幕后策划与决断"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "li_yuan",
+      "name": "李渊",
+      "identity": "唐高祖",
+      "globalStance": "摇摆不定，倾向太子",
+      "personality": "优柔寡断，重亲情，晚年贪图享乐",
+      "knowledgeBoundary": "不知两派暗杀计划，只知明面争斗",
+      "portraitImage": "",
+      "promptProfileKey": "emperor_hesitant"
+    },
+    {
+      "id": "yin_defei",
+      "name": "尹德妃",
+      "identity": "宠妃",
+      "globalStance": "支持太子",
+      "personality": "善妒，心机深沉，与太子私通",
+      "knowledgeBoundary": "知晓太子部分密谋，不知秦王伏兵计划",
+      "portraitImage": "",
+      "promptProfileKey": "concubine_scheming"
+    },
+    {
+      "id": "fang_xuanling",
+      "name": "房玄龄",
+      "identity": "秦王府谋士",
+      "globalStance": "支持秦王",
+      "personality": "沉稳睿智，善于谋划，行事谨慎",
+      "knowledgeBoundary": "知晓秦王全部计划，不知皇帝真实心意",
+      "portraitImage": "",
+      "promptProfileKey": "strategist_calm"
+    },
+    {
+      "id": "wei_zheng",
+      "name": "魏征",
+      "identity": "太子洗马",
+      "globalStance": "支持太子",
+      "personality": "刚正不阿，直言敢谏，忠于社稷",
+      "knowledgeBoundary": "知晓太子困境，曾劝太子早除秦王",
+      "portraitImage": "",
+      "promptProfileKey": "advisor_righteous"
+    },
+    {
+      "id": "yuchi_gong",
+      "name": "尉迟恭",
+      "identity": "秦王府猛将",
+      "globalStance": "死忠秦王",
+      "personality": "勇猛无畏，忠心耿耿，行事果断",
+      "knowledgeBoundary": "只知军事行动，不知政治谋划",
+      "portraitImage": "",
+      "promptProfileKey": "general_loyal"
+    },
+    {
+      "id": "chang_he",
+      "name": "常何",
+      "identity": "玄武门守将",
+      "globalStance": "暗中倒向秦王",
+      "personality": "见风使舵，贪图富贵，两面三刀",
+      "knowledgeBoundary": "掌握玄武门防务，不知双方全部底牌",
+      "portraitImage": "",
+      "promptProfileKey": "opportunist_neutral"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "node_1",
+      "title": "夜宴风波",
+      "year": "625年",
+      "location": "秦王府",
+      "background": "太子设宴，秦王险些被毒杀，府中人心惶惶。",
+      "conflict": "是否公开指控太子下毒？指控则撕破脸皮，不指控则示弱。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "li_shimin",
+        "zhangsun_wuji"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "fang_xuanling",
+          "stanceInThisNode": "主张隐忍，等待时机成熟",
+          "knowledgeInThisNode": "知晓毒酒之事，但无确凿证据，不知皇帝真实态度",
+          "relationshipToPlayerRole": {
+            "li_shimin": "忠诚谋士，言听计从",
+            "zhangsun_wuji": "同僚好友，互相尊重"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "li_shimin": [
+              "先生以为此事当如何处置？",
+              "可有证据证明是太子所为？"
+            ],
+            "zhangsun_wuji": [
+              "玄龄兄有何良策？",
+              "此事是否该禀报陛下？"
+            ]
+          }
+        },
+        {
+          "npcId": "yuchi_gong",
+          "stanceInThisNode": "激愤难平，主张立即报复",
+          "knowledgeInThisNode": "亲眼见秦王吐血，认定太子下毒，不知政治谋划",
+          "relationshipToPlayerRole": {
+            "li_shimin": "誓死效忠，愿为先锋",
+            "zhangsun_wuji": "敬重其谋略，但嫌其过于谨慎"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "li_shimin": [
+              "将军想如何应对？",
+              "可愿为我查清真相？"
+            ],
+            "zhangsun_wuji": [
+              "尉迟将军有何打算？",
+              "军中将士反应如何？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "li_shimin": [
+          {
+            "id": "script_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "夜深人静，秦王府灯火通明，李世民面色苍白，端坐主位。"
+          },
+          {
+            "id": "script_2",
+            "type": "dialogue",
+            "speakerName": "李世民",
+            "text": "今夜太子设宴，酒中有毒，我吐血数升，险些丧命。"
+          }
+        ],
+        "zhangsun_wuji": [
+          {
+            "id": "script_3",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "长孙无忌眉头紧锁，在厅中来回踱步，心中盘算对策。"
+          },
+          {
+            "id": "script_4",
+            "type": "dialogue",
+            "speakerName": "长孙无忌",
+            "text": "此事若不追究，秦王威信何在？若追究，又恐打草惊蛇。"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_li_shimin_1",
+          "text": "公开指控太子下毒，请求父皇彻查",
+          "description": "撕破脸皮，正面交锋",
+          "type": "historical",
+          "allowedRoleIds": [
+            "li_shimin"
+          ],
+          "stateEffects": {
+            "court_influence": -10,
+            "emperor_trust": 5,
+            "crisis_level": 20
+          },
+          "nextNodeId": "node_2",
+          "randomEventId": "",
+          "historicalExplanation": "正史中李世民选择隐忍，此举将提前引爆矛盾。",
+          "resultScript": [
+            {
+              "id": "result_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "李世民上奏父皇，指控太子谋害。朝野震动，两派对立加剧。"
+            }
+          ]
+        },
+        {
+          "id": "decision_li_shimin_2",
+          "text": "隐忍不发，暗中积蓄力量",
+          "description": "韬光养晦，等待时机",
+          "type": "historical",
+          "allowedRoleIds": [
+            "li_shimin"
+          ],
+          "stateEffects": {
+            "court_influence": 5,
+            "crisis_level": -10
+          },
+          "nextNodeId": "node_3",
+          "randomEventId": "",
+          "historicalExplanation": "正史选择，为日后玄武门之变争取时间。",
+          "resultScript": [
+            {
+              "id": "result_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "李世民按兵不动，暗中联络旧部，等待最佳时机。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zhangsun_1",
+          "text": "建议秦王立即向陛下禀报，争取同情",
+          "description": "以退为进，争取舆论",
+          "type": "historical",
+          "allowedRoleIds": [
+            "zhangsun_wuji"
+          ],
+          "stateEffects": {
+            "emperor_trust": 10,
+            "public_opinion": 15
+          },
+          "nextNodeId": "node_2",
+          "randomEventId": "",
+          "historicalExplanation": "谋士建议，试图通过舆论施压太子。",
+          "resultScript": [
+            {
+              "id": "result_3",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "长孙无忌献策，秦王依计而行，朝中舆论渐起。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zhangsun_2",
+          "text": "建议秦王暗中调查，收集证据",
+          "description": "稳扎稳打，谋定后动",
+          "type": "historical",
+          "allowedRoleIds": [
+            "zhangsun_wuji"
+          ],
+          "stateEffects": {
+            "court_influence": 5,
+            "crisis_level": -5
+          },
+          "nextNodeId": "node_3",
+          "randomEventId": "",
+          "historicalExplanation": "谨慎策略，为日后行动做准备。",
+          "resultScript": [
+            {
+              "id": "result_4",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "长孙无忌派人暗中查探，逐步掌握太子党羽动向。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "li_shimin": {
+          "currentSituation": "太子设宴，酒中有毒，你吐血数升，险些丧命。",
+          "informationConflict": "无确凿证据证明是太子下毒，但府中上下认定是他。",
+          "playerPressure": "若不回应，威信尽失；若指控，又恐父皇不信。",
+          "inquiryPurpose": "了解谋士们的建议，权衡利弊后再做决断。",
+          "playerSituation": "身体虚弱，但必须主持大局，稳定军心。",
+          "decisionPressure": "此事若处理不当，将影响日后夺嫡之争。",
+          "stakes": "威信、父皇信任、与太子的关系"
+        },
+        "zhangsun_wuji": {
+          "currentSituation": "秦王险些被毒杀，府中群情激愤，急需对策。",
+          "informationConflict": "明知是太子所为，却无证据，难以公开指控。",
+          "playerPressure": "必须为秦王出谋划策，但每一步都关乎成败。",
+          "inquiryPurpose": "了解各方态度，为秦王提供最佳建议。",
+          "playerSituation": "作为心腹谋士，必须冷静分析，不能意气用事。",
+          "decisionPressure": "秦王在等你的建议，必须尽快拿出方案。",
+          "stakes": "秦王安危、家族荣辱、自身前途"
+        }
+      },
+      "shortContext": "毒酒余波，秦王府密议对策",
+      "detailedContext": "太子宴请秦王，酒中有毒，秦王吐血数升。此事真假难辨，但秦王府上下群情激愤，谋士们连夜密议。",
+      "glossary": [
+        {
+          "term": "天策上将",
+          "explanation": "李世民的封号，地位仅次于皇帝和太子"
+        },
+        {
+          "term": "玄武门",
+          "explanation": "皇宫北门，日后政变发生之地"
+        }
+      ]
+    },
+    {
+      "id": "node_2",
+      "title": "后宫谗言",
+      "year": "626年初",
+      "location": "东宫",
+      "background": "太子与齐王联络后宫嫔妃，在皇帝面前诋毁秦王。",
+      "conflict": "是否加大力度陷害秦王？过犹不及，不力则秦王坐大。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "li_jiancheng",
+        "li_yuanji"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "yin_defei",
+          "stanceInThisNode": "极力怂恿太子加大陷害力度，愿在后宫配合",
+          "knowledgeInThisNode": "知晓皇帝对秦王的疑虑，不知秦王已在谋划反击",
+          "relationshipToPlayerRole": {
+            "li_jiancheng": "私通之情，利益共同体",
+            "li_yuanji": "表面客套，暗中轻视"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "li_jiancheng": [
+              "父皇近日对秦王态度如何？",
+              "后宫还能做些什么？"
+            ],
+            "li_yuanji": [
+              "德妃娘娘觉得父皇会信吗？",
+              "有没有更狠的招？"
+            ]
+          }
+        },
+        {
+          "npcId": "wei_zheng",
+          "stanceInThisNode": "直言劝太子早下决断，勿留后患",
+          "knowledgeInThisNode": "知晓秦王功高震主之危，不知秦王已收买玄武门守将",
+          "relationshipToPlayerRole": {
+            "li_jiancheng": "忠臣直谏，恨铁不成钢",
+            "li_yuanji": "表面恭敬，内心不屑其投机"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "li_jiancheng": [
+              "先生以为当如何处置秦王？",
+              "若不动手，后果如何？"
+            ],
+            "li_yuanji": [
+              "魏大人觉得我该做什么？",
+              "秦王真有那么大威胁吗？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "li_jiancheng": [
+          {
+            "id": "script_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "东宫书房内，太子李建成眉头紧锁，尹德妃刚从宫中传来消息。"
+          },
+          {
+            "id": "script_2",
+            "type": "dialogue",
+            "speakerName": "李建成",
+            "text": "父皇对二弟的疑心已起，但若逼得太紧，恐生变故。"
+          }
+        ],
+        "li_yuanji": [
+          {
+            "id": "script_3",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "齐王李元吉踱步于东宫偏殿，听闻太子犹豫不决，心中暗自盘算。"
+          },
+          {
+            "id": "script_4",
+            "type": "dialogue",
+            "speakerName": "李元吉",
+            "text": "大哥太过优柔寡断，若不趁早除掉二哥，后患无穷。"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_jiancheng_1",
+          "text": "继续在父皇面前进谗言，但适可而止",
+          "description": "稳健策略，避免激化矛盾",
+          "type": "historical",
+          "allowedRoleIds": [
+            "li_jiancheng"
+          ],
+          "stateEffects": {
+            "emperor_trust": 5,
+            "public_opinion": -5,
+            "crisis_level": 10
+          },
+          "nextNodeId": "node_3",
+          "randomEventId": "",
+          "historicalExplanation": "正史中太子采取渐进策略，但未能阻止秦王先发制人。",
+          "resultScript": [
+            {
+              "id": "result_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "太子决定稳扎稳打，继续在父皇耳边吹风，但不敢做得太绝。"
+            }
+          ]
+        },
+        {
+          "id": "decision_jiancheng_2",
+          "text": "联合后宫加大陷害力度，不惜一切",
+          "description": "激进策略，风险极高",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "li_jiancheng"
+          ],
+          "stateEffects": {
+            "emperor_trust": 10,
+            "public_opinion": -15,
+            "crisis_level": 25
+          },
+          "nextNodeId": "node_3",
+          "randomEventId": "",
+          "historicalExplanation": "若太子采取极端手段，可能提前引发玄武门之变或被秦王抓住把柄。",
+          "resultScript": [
+            {
+              "id": "result_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "太子决定孤注一掷，命尹德妃等人全力诋毁秦王，不留退路。"
+            }
+          ]
+        },
+        {
+          "id": "decision_yuanji_1",
+          "text": "全力配合太子，出谋划策",
+          "description": "依附太子，共同对付秦王",
+          "type": "historical",
+          "allowedRoleIds": [
+            "li_yuanji"
+          ],
+          "stateEffects": {
+            "court_influence": 5,
+            "crisis_level": 15
+          },
+          "nextNodeId": "node_3",
+          "randomEventId": "",
+          "historicalExplanation": "齐王历史上积极协助太子，但最终与太子一同在玄武门被杀。",
+          "resultScript": [
+            {
+              "id": "result_3",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "齐王决定全力支持太子，献计献策，誓要除掉秦王。"
+            }
+          ]
+        },
+        {
+          "id": "decision_yuanji_2",
+          "text": "暗中观望，保存实力",
+          "description": "投机策略，坐山观虎斗",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "li_yuanji"
+          ],
+          "stateEffects": {
+            "military_support": 5,
+            "crisis_level": -5
+          },
+          "nextNodeId": "node_3",
+          "randomEventId": "",
+          "historicalExplanation": "若齐王选择观望，可能在玄武门之变中幸存，但失去政治资本。",
+          "resultScript": [
+            {
+              "id": "result_4",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "齐王表面应承，暗中却想保存实力，坐收渔翁之利。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "li_jiancheng": {
+          "currentSituation": "后宫势力已为你所用，父皇对秦王疑心渐起。",
+          "informationConflict": "不知秦王已暗中收买玄武门守将，正等待时机。",
+          "playerPressure": "魏征直言进谏，若不早做决断，恐生变故。",
+          "inquiryPurpose": "了解后宫动向，权衡进退之策。",
+          "playerSituation": "太子之位看似稳固，实则危机四伏。",
+          "decisionPressure": "秦王势力日盛，若不压制，后患无穷。",
+          "stakes": "储君之位与身家性命"
+        },
+        "li_yuanji": {
+          "currentSituation": "太子与秦王明争暗斗，你夹在中间左右逢源。",
+          "informationConflict": "不知双方都在暗中布局，你只是棋子。",
+          "playerPressure": "太子需要你的支持，但你也想保存实力。",
+          "inquiryPurpose": "探听虚实，寻找最佳投机时机。",
+          "playerSituation": "齐王身份尴尬，实力不足以独善其身。",
+          "decisionPressure": "站错队就是死路一条，必须审时度势。",
+          "stakes": "自身安危与未来权位"
+        }
+      },
+      "shortContext": "后宫暗流，太子党密谋",
+      "detailedContext": "尹德妃等人在皇帝枕边吹风，诬陷秦王有不臣之心。太子犹豫是否走极端，魏征进言早作决断。",
+      "glossary": [
+        {
+          "term": "东宫",
+          "explanation": "太子居住的宫殿，代指太子势力"
+        },
+        {
+          "term": "枕边风",
+          "explanation": "嫔妃在皇帝耳边进谗言，影响皇帝判断"
+        }
+      ]
+    },
+    {
+      "id": "node_3",
+      "title": "调虎离山",
+      "year": "626年六月",
+      "location": "天策府",
+      "background": "突厥入侵边境，太子奏请齐王出征，欲借机夺秦王兵权。",
+      "conflict": "太子表面为国分忧，实则暗藏杀机，秦王是否揭穿？",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "li_shimin",
+        "zhangsun_wuji"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "fang_xuanling",
+          "stanceInThisNode": "力主先发制人，认为时机已到",
+          "knowledgeInThisNode": "知晓太子夺兵权计划，了解秦王全部谋划",
+          "relationshipToPlayerRole": {
+            "li_shimin": "心腹谋士，生死相随",
+            "zhangsun_wuji": "同僚挚友，共谋大事"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "li_shimin": [
+              "房玄龄，太子此举意欲何为？",
+              "我们该如何应对夺兵权之谋？"
+            ],
+            "zhangsun_wuji": [
+              "房兄，此事可有破局之法？",
+              "秦王当下该如何决断？"
+            ]
+          }
+        },
+        {
+          "npcId": "li_yuan",
+          "stanceInThisNode": "摇摆不定，倾向太子建议",
+          "knowledgeInThisNode": "不知双方暗杀计划，只知明面争斗",
+          "relationshipToPlayerRole": {
+            "li_shimin": "父子情深，但信任已动摇",
+            "zhangsun_wuji": "君臣疏远，心存戒备"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "li_shimin": [
+              "父皇，儿臣有要事密奏",
+              "太子此举恐有深意"
+            ],
+            "zhangsun_wuji": [
+              "陛下，秦王忠心可鉴",
+              "齐王出征是否妥当？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "li_shimin": [
+          {
+            "id": "script_li_shimin_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "天策府内，李世民收到密报：太子奏请齐王出征，实为夺其兵权。"
+          },
+          {
+            "id": "script_li_shimin_2",
+            "type": "dialogue",
+            "speakerName": "李世民",
+            "text": "太子此计甚毒，若兵权被夺，我等皆成砧上鱼肉。"
+          }
+        ],
+        "zhangsun_wuji": [
+          {
+            "id": "script_zhangsun_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "长孙无忌得知太子夺兵权之计，深知此乃生死存亡之机。"
+          },
+          {
+            "id": "script_zhangsun_2",
+            "type": "dialogue",
+            "speakerName": "长孙无忌",
+            "text": "秦王若不先发制人，恐将万劫不复，当速断！"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_li_shimin_1",
+          "text": "密奏皇帝，揭发太子夺兵权阴谋",
+          "description": "向父皇禀报太子真实意图，争取皇帝支持",
+          "type": "historical",
+          "allowedRoleIds": [
+            "li_shimin"
+          ],
+          "stateEffects": {
+            "emperor_trust": 10,
+            "crisis_level": 15
+          },
+          "nextNodeId": "node_4",
+          "randomEventId": "",
+          "historicalExplanation": "正史中李世民选择先发制人，密奏皇帝后发动玄武门之变",
+          "resultScript": [
+            {
+              "id": "result_li_shimin_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "李世民入宫密奏，皇帝虽未明确表态，但心中已生疑虑。"
+            }
+          ]
+        },
+        {
+          "id": "decision_li_shimin_2",
+          "text": "按兵不动，暗中筹备",
+          "description": "暂不揭穿，积蓄力量等待更好时机",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "li_shimin"
+          ],
+          "stateEffects": {
+            "military_support": -10,
+            "crisis_level": 20
+          },
+          "nextNodeId": "node_4",
+          "randomEventId": "",
+          "historicalExplanation": "若拖延则太子势力坐大，秦王处境更加危险",
+          "resultScript": [
+            {
+              "id": "result_li_shimin_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "李世民选择隐忍，但兵权被夺的风险与日俱增。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zhangsun_1",
+          "text": "力劝秦王先发制人",
+          "description": "以谋士身份进言，主张立即行动",
+          "type": "historical",
+          "allowedRoleIds": [
+            "zhangsun_wuji"
+          ],
+          "stateEffects": {
+            "crisis_level": 10,
+            "court_influence": 5
+          },
+          "nextNodeId": "node_4",
+          "randomEventId": "",
+          "historicalExplanation": "长孙无忌是玄武门之变的主要策划者之一",
+          "resultScript": [
+            {
+              "id": "result_zhangsun_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "长孙无忌力陈利害，秦王决意先发制人。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zhangsun_2",
+          "text": "建议暂缓，等待更佳时机",
+          "description": "认为准备不足，主张谨慎行事",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "zhangsun_wuji"
+          ],
+          "stateEffects": {
+            "crisis_level": -5,
+            "military_support": -5
+          },
+          "nextNodeId": "node_4",
+          "randomEventId": "",
+          "historicalExplanation": "拖延可能导致太子势力坐大，错失良机",
+          "resultScript": [
+            {
+              "id": "result_zhangsun_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "长孙无忌建议暂缓，但局势瞬息万变，机会稍纵即逝。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "li_shimin": {
+          "currentSituation": "太子借突厥入侵之机，奏请齐王统领秦王府精兵出征。",
+          "informationConflict": "太子表面为国分忧，实则欲夺你兵权，父皇被蒙在鼓里。",
+          "playerPressure": "兵权一旦被夺，你将任人宰割，生死存亡在此一举。",
+          "inquiryPurpose": "探明父皇真实态度，了解朝中大臣立场。",
+          "playerSituation": "你掌握军权，但朝堂影响力不足，父皇信任动摇。",
+          "decisionPressure": "若不行动，兵权将被夺；若行动，需承担风险。",
+          "stakes": "影响你的军事实力、皇帝信任，以及最终能否登基。"
+        },
+        "zhangsun_wuji": {
+          "currentSituation": "太子奏请齐王出征，实为夺秦王兵权，局势危急。",
+          "informationConflict": "太子阴谋已明，但皇帝态度不明，需谨慎行事。",
+          "playerPressure": "秦王若败，你作为心腹谋士将万劫不复。",
+          "inquiryPurpose": "了解房玄龄等人的判断，为秦王谋划最佳策略。",
+          "playerSituation": "你是秦王心腹，掌握情报网络，但朝堂影响力有限。",
+          "decisionPressure": "进言时机关乎秦王成败，一步错则满盘皆输。",
+          "stakes": "影响秦王命运、你的家族荣辱，以及天下大势走向。"
+        }
+      },
+      "shortContext": "兵权之争，生死存亡之际",
+      "detailedContext": "太子奏请齐王统领秦王府精兵出征突厥，实为夺兵权。李世民得知后，决定先发制人，密奏皇帝。",
+      "glossary": [
+        {
+          "term": "天策府",
+          "explanation": "李世民的府邸，也是其政治军事核心所在。"
+        },
+        {
+          "term": "秦王府精兵",
+          "explanation": "李世民麾下精锐部队，战功赫赫，忠诚度极高。"
+        }
+      ]
+    },
+    {
+      "id": "node_4",
+      "title": "最后抉择",
+      "year": "626年六月三日",
+      "location": "东宫",
+      "background": "秦王已入宫密奏，皇帝许诺次日对质，太子得知消息。",
+      "conflict": "是入宫对质还是先下手？对质可能失败，先下手风险极大。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "li_jiancheng",
+        "li_yuanji"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "wei_zheng",
+          "stanceInThisNode": "力主不入宫，认为秦王设下圈套",
+          "knowledgeInThisNode": "知晓秦王入宫告状，不知皇帝真实态度",
+          "relationshipToPlayerRole": {
+            "li_jiancheng": "忠臣直谏，愿为太子赴死",
+            "li_yuanji": "轻视其投机心态"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "li_jiancheng": [
+              "秦王入宫究竟说了什么？",
+              "我该如何应对明日对质？"
+            ],
+            "li_yuanji": [
+              "你觉得太子会怎么做？",
+              "我们能否带兵入宫？"
+            ]
+          }
+        },
+        {
+          "npcId": "yin_defei",
+          "stanceInThisNode": "支持太子，煽动其先下手",
+          "knowledgeInThisNode": "知晓皇帝对秦王不满，不知秦王伏兵计划",
+          "relationshipToPlayerRole": {
+            "li_jiancheng": "暗中私通，情感复杂",
+            "li_yuanji": "表面亲近，实则利用"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "li_jiancheng": [
+              "父皇对我究竟是什么态度？",
+              "后宫能否帮我说话？"
+            ],
+            "li_yuanji": [
+              "你为何如此关心此事？",
+              "后宫那边有什么消息？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "li_jiancheng": [
+          {
+            "id": "script_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "东宫灯火通明，太子李建成面色凝重，密报刚刚送达。"
+          },
+          {
+            "id": "script_2",
+            "type": "dialogue",
+            "speakerName": "李建成",
+            "text": "世民入宫告状，父皇许诺明日对质，此事必有蹊跷。"
+          }
+        ],
+        "li_yuanji": [
+          {
+            "id": "script_3",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "齐王李元吉匆匆赶来，眼中闪烁着算计的光芒。"
+          },
+          {
+            "id": "script_4",
+            "type": "dialogue",
+            "speakerName": "李元吉",
+            "text": "大哥，秦王此举分明是陷阱，我们必须先下手为强！"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_1",
+          "text": "明日入宫对质，据理力争",
+          "description": "相信父皇公正，以太子身份正面对抗秦王",
+          "type": "historical",
+          "allowedRoleIds": [
+            "li_jiancheng"
+          ],
+          "stateEffects": {
+            "emperor_trust": 10,
+            "crisis_level": 20
+          },
+          "nextNodeId": "node_5",
+          "randomEventId": "",
+          "historicalExplanation": "正史中太子选择入宫，结果在玄武门被伏击身亡。",
+          "resultScript": [
+            {
+              "id": "result_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "太子决定入宫对质，殊不知这将是他的最后抉择。"
+            }
+          ]
+        },
+        {
+          "id": "decision_2",
+          "text": "称病不入宫，静观其变",
+          "description": "以退为进，避免落入秦王圈套",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "li_jiancheng"
+          ],
+          "stateEffects": {
+            "court_influence": -5,
+            "crisis_level": -10
+          },
+          "nextNodeId": "node_5",
+          "randomEventId": "",
+          "historicalExplanation": "反事实假设：太子避不入宫，可能暂时保全性命。",
+          "resultScript": [
+            {
+              "id": "result_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "太子称病不出，秦王的计划被打乱，局势更加扑朔迷离。"
+            }
+          ]
+        },
+        {
+          "id": "decision_3",
+          "text": "带兵入宫，控制局面",
+          "description": "以武力先发制人，夺取主动权",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "li_yuanji"
+          ],
+          "stateEffects": {
+            "military_support": 15,
+            "crisis_level": 30
+          },
+          "nextNodeId": "node_5",
+          "randomEventId": "",
+          "historicalExplanation": "反事实假设：齐王带兵入宫，可能引发更大规模冲突。",
+          "resultScript": [
+            {
+              "id": "result_3",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "齐王主张武力解决，但太子犹豫不决，错失良机。"
+            }
+          ]
+        },
+        {
+          "id": "decision_4",
+          "text": "劝太子不入宫，自己观望",
+          "description": "保全自身，让太子承担风险",
+          "type": "counterfactual",
+          "allowedRoleIds": [
+            "li_yuanji"
+          ],
+          "stateEffects": {
+            "court_influence": 5,
+            "crisis_level": -5
+          },
+          "nextNodeId": "node_5",
+          "randomEventId": "",
+          "historicalExplanation": "反事实假设：齐王明哲保身，可能坐收渔利。",
+          "resultScript": [
+            {
+              "id": "result_4",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "齐王劝阻太子，自己却暗中观察，等待时机。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "li_jiancheng": {
+          "currentSituation": "秦王入宫告状，父皇许诺明日对质，你陷入两难。",
+          "informationConflict": "不知秦王说了什么，也不知父皇真实态度。",
+          "playerPressure": "入宫可能遇险，不入宫则显得心虚。",
+          "inquiryPurpose": "了解各方态度，判断是否入宫。",
+          "playerSituation": "太子身份，但功勋不足，秦王威胁巨大。",
+          "decisionPressure": "明日必须做出选择，否则局势失控。",
+          "stakes": "储君之位与身家性命"
+        },
+        "li_yuanji": {
+          "currentSituation": "太子面临危机，你有机会借机行事。",
+          "informationConflict": "不知秦王计划，也不知太子决心。",
+          "playerPressure": "支持太子还是自保，必须做出选择。",
+          "inquiryPurpose": "了解太子态度，决定自己的行动。",
+          "playerSituation": "齐王身份，实力不足，依附太子。",
+          "decisionPressure": "局势紧迫，必须站队。",
+          "stakes": "自身安危与未来权力"
+        }
+      },
+      "shortContext": "密奏泄露，太子党紧急应对",
+      "detailedContext": "有人密报秦王入宫告状，太子与齐王连夜商议。魏征力主不入宫，齐王则主张带兵入宫控制局面。",
+      "glossary": [
+        {
+          "term": "对质",
+          "explanation": "皇帝安排双方当面澄清指控"
+        },
+        {
+          "term": "密奏",
+          "explanation": "秦王秘密向皇帝告发太子的奏章"
+        }
+      ]
+    },
+    {
+      "id": "node_5",
+      "title": "玄武门",
+      "year": "626年六月四日",
+      "location": "玄武门",
+      "background": "黎明，太子与齐王骑马入玄武门，不知已入伏击圈。",
+      "conflict": "是否亲手射杀兄弟？这是夺权的关键时刻，也是道德的深渊。",
+      "backgroundImage": "",
+      "playableRoleIds": [
+        "li_shimin",
+        "zhangsun_wuji"
+      ],
+      "availableNPCs": [
+        {
+          "npcId": "yuchi_gong",
+          "stanceInThisNode": "死忠秦王，只等一声令下便动手",
+          "knowledgeInThisNode": "知道伏兵部署，不知秦王内心挣扎",
+          "relationshipToPlayerRole": {
+            "li_shimin": "主仆，愿为主公赴死",
+            "zhangsun_wuji": "同僚，敬重其谋略"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "li_shimin": [
+              "尉迟将军，伏兵可曾就位？",
+              "若我下不了手，你当如何？"
+            ],
+            "zhangsun_wuji": [
+              "将军，常何可靠吗？",
+              "动手后如何应对援军？"
+            ]
+          }
+        },
+        {
+          "npcId": "chang_he",
+          "stanceInThisNode": "已倒向秦王，但心存观望",
+          "knowledgeInThisNode": "掌握玄武门防务，不知秦王全部计划",
+          "relationshipToPlayerRole": {
+            "li_shimin": "暗中投靠，盼富贵",
+            "zhangsun_wuji": "交易关系，各取所需"
+          },
+          "canBeAsked": true,
+          "quickQuestionsByPlayerRole": {
+            "li_shimin": [
+              "常何，门可曾关死？",
+              "太子侍卫可有异常？"
+            ],
+            "zhangsun_wuji": [
+              "守军可都听你号令？",
+              "若有人闯门，当如何？"
+            ]
+          }
+        }
+      ],
+      "dialogueLimit": 3,
+      "fixedScript": {
+        "li_shimin": [
+          {
+            "id": "script_1",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "晨雾弥漫，玄武门悄然关闭。太子与齐王策马而入，毫无察觉。"
+          },
+          {
+            "id": "script_2",
+            "type": "dialogue",
+            "speakerName": "李世民",
+            "text": "他们来了……这一箭，射出便再无回头路。"
+          }
+        ],
+        "zhangsun_wuji": [
+          {
+            "id": "script_3",
+            "type": "narration",
+            "speakerName": "旁白",
+            "text": "长孙无忌立于暗处，手心沁出汗珠。成败在此一举。"
+          },
+          {
+            "id": "script_4",
+            "type": "dialogue",
+            "speakerName": "长孙无忌",
+            "text": "殿下，时机稍纵即逝，不可犹豫。"
+          }
+        ]
+      },
+      "decisions": [
+        {
+          "id": "decision_li_shimin_1",
+          "text": "亲手射杀太子",
+          "description": "一箭定乾坤，背负弑兄之名",
+          "type": "historical",
+          "allowedRoleIds": [
+            "li_shimin"
+          ],
+          "stateEffects": {
+            "crisis_level": 20,
+            "military_support": 10,
+            "public_opinion": -15
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "正史记载，李世民亲手射杀太子李建成，奠定玄武门之变胜局。",
+          "resultScript": [
+            {
+              "id": "result_1",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "箭矢破空，太子应声落马。李世民手微颤，却未停歇。"
+            }
+          ]
+        },
+        {
+          "id": "decision_li_shimin_2",
+          "text": "命尉迟恭动手",
+          "description": "借他人之手，保全名声",
+          "type": "alternative",
+          "allowedRoleIds": [
+            "li_shimin"
+          ],
+          "stateEffects": {
+            "crisis_level": 10,
+            "military_support": 5,
+            "public_opinion": -5
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "反事实推演：若李世民不忍下手，尉迟恭代为执行，但威望受损。",
+          "resultScript": [
+            {
+              "id": "result_2",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "尉迟恭领命冲出，刀光闪过，太子倒在血泊之中。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zhangsun_wuji_1",
+          "text": "催促秦王动手",
+          "description": "以大义相逼，促其决断",
+          "type": "historical",
+          "allowedRoleIds": [
+            "zhangsun_wuji"
+          ],
+          "stateEffects": {
+            "crisis_level": 15,
+            "court_influence": 10
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "长孙无忌作为心腹谋士，关键时刻推动秦王下定决心。",
+          "resultScript": [
+            {
+              "id": "result_3",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "秦王闻言，目光一凛，终于张弓搭箭，瞄准来人。"
+            }
+          ]
+        },
+        {
+          "id": "decision_zhangsun_wuji_2",
+          "text": "静观其变",
+          "description": "不施加压力，让秦王自行抉择",
+          "type": "alternative",
+          "allowedRoleIds": [
+            "zhangsun_wuji"
+          ],
+          "stateEffects": {
+            "crisis_level": 5,
+            "court_influence": -5
+          },
+          "nextNodeId": "",
+          "randomEventId": "",
+          "historicalExplanation": "反事实推演：谋士沉默，秦王可能错失良机，局势生变。",
+          "resultScript": [
+            {
+              "id": "result_4",
+              "type": "decisionResult",
+              "speakerName": "旁白",
+              "text": "时间流逝，太子似有察觉，勒马欲退。机会正在溜走。"
+            }
+          ]
+        }
+      ],
+      "nodeIntroForRoles": {
+        "li_shimin": {
+          "currentSituation": "伏兵已就位，太子与齐王已入瓮。",
+          "informationConflict": "不知常何是否可靠，不知皇帝是否知情。",
+          "playerPressure": "不杀则死，杀则背负千古骂名。",
+          "inquiryPurpose": "确认伏兵部署，探查常何忠诚。",
+          "playerSituation": "手握军权，但内心煎熬。",
+          "decisionPressure": "太子若逃脱，必遭反噬。",
+          "stakes": "皇位与性命，名声与良知。"
+        },
+        "zhangsun_wuji": {
+          "currentSituation": "伏兵已就位，成败在此一举。",
+          "informationConflict": "不知秦王是否下定决心。",
+          "playerPressure": "家族荣辱系于此战。",
+          "inquiryPurpose": "确认秦王心意，协调行动。",
+          "playerSituation": "谋士身份，无兵权在手。",
+          "decisionPressure": "若秦王犹豫，必须推动。",
+          "stakes": "家族兴衰，自身前途。"
+        }
+      },
+      "shortContext": "伏兵已就，生死一瞬",
+      "detailedContext": "常何已暗中倒向秦王，玄武门关闭。太子与齐王入内，发现异常欲退，李世民从隐蔽处现身，张弓搭箭。",
+      "glossary": [
+        {
+          "term": "玄武门",
+          "explanation": "长安皇宫北门，禁军把守的战略要地。"
+        },
+        {
+          "term": "常何",
+          "explanation": "玄武门守将，原属太子阵营，后被秦王收买。"
+        }
+      ]
+    }
+  ],
+  "stateSchema": [
+    {
+      "key": "court_influence",
+      "label": "朝堂影响力",
+      "description": "在朝廷大臣中的支持程度",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 50
+    },
+    {
+      "key": "military_support",
+      "label": "军队忠诚度",
+      "description": "军队对角色的忠诚程度",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 50
+    },
+    {
+      "key": "emperor_trust",
+      "label": "皇帝信任",
+      "description": "皇帝对角色的信任程度",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 50
+    },
+    {
+      "key": "public_opinion",
+      "label": "舆论支持",
+      "description": "民间与士林对角色的评价",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 50
+    },
+    {
+      "key": "crisis_level",
+      "label": "危机程度",
+      "description": "当前局势的紧迫与危险程度",
+      "min": 0,
+      "max": 100,
+      "defaultValue": 50
+    }
+  ],
+  "defaultState": {
+    "court_influence": 50,
+    "military_support": 50,
+    "emperor_trust": 50,
+    "public_opinion": 50,
+    "crisis_level": 50
+  },
+  "randomEvents": [
+    {
+      "id": "random_1",
+      "title": "密探泄密",
+      "description": "有人泄露了你的部分计划给对手。",
+      "relatedStateKeys": [
+        "crisis_level",
+        "court_influence"
+      ],
+      "probabilityFormulaDescription": "危机程度越高，泄密概率越大",
+      "successText": "你及时发现泄密者，将计就计传递假情报。",
+      "failureText": "泄密者逃脱，对手提前得知你的计划，危机加剧。",
+      "successEffects": {
+        "crisis_level": -10,
+        "court_influence": 5
+      },
+      "failureEffects": {
+        "crisis_level": 15,
+        "court_influence": -10
+      }
+    },
+    {
+      "id": "random_2",
+      "title": "意外盟友",
+      "description": "一位意想不到的人物表示愿意暗中相助。",
+      "relatedStateKeys": [
+        "public_opinion",
+        "court_influence"
+      ],
+      "probabilityFormulaDescription": "舆论支持越高，越可能获得意外盟友",
+      "successText": "这位盟友提供了关键情报，助你一臂之力。",
+      "failureText": "这竟是对方的反间计，你险些中计。",
+      "successEffects": {
+        "court_influence": 10,
+        "military_support": 5
+      },
+      "failureEffects": {
+        "court_influence": -5,
+        "crisis_level": 10
+      }
+    }
+  ],
+  "endings": [
+    {
+      "id": "ending_1",
+      "title": "贞观之治",
+      "priority": 1,
+      "conditionDescription": "李世民成功射杀太子与齐王，掌控朝局",
+      "summary": "李世民登基为帝，开创贞观之治，大唐进入全盛时期。",
+      "historyComparison": "与正史一致，李世民成为唐太宗。",
+      "counterfactualExplanation": "若李世民犹豫不决，可能反被太子所杀。",
+      "endingNarration": [
+        {
+          "id": "ending_1_text",
+          "type": "endingNarration",
+          "speakerName": "旁白",
+          "text": "玄武门之血染红了黎明。李世民站在兄弟的尸体旁，面无表情。他知道，从今往后，史书将永远记住这一天。而大唐，将在他的手中走向辉煌。"
+        }
+      ],
+      "backgroundImage": ""
+    },
+    {
+      "id": "ending_2",
+      "title": "太子继位",
+      "priority": 2,
+      "conditionDescription": "太子提前得知伏击，反杀李世民",
+      "summary": "李建成登基，李世民被赐死，唐朝走向不同道路。",
+      "historyComparison": "与正史相反，太子成功继位。",
+      "counterfactualExplanation": "若常何保持忠诚或泄密，李世民计划可能失败。",
+      "endingNarration": [
+        {
+          "id": "ending_2_text",
+          "type": "endingNarration",
+          "speakerName": "旁白",
+          "text": "玄武门的伏兵被提前发现。太子李建成冷冷地看着被擒获的弟弟，长叹一声。权力的游戏，终究只能有一个赢家。秦王府上下，尽皆伏诛。"
+        }
+      ],
+      "backgroundImage": ""
+    },
+    {
+      "id": "ending_3",
+      "title": "两败俱伤",
+      "priority": 3,
+      "conditionDescription": "双方在玄武门激战，同归于尽或引发内战",
+      "summary": "唐朝陷入内乱，突厥趁机南下，天下再度大乱。",
+      "historyComparison": "与正史完全不同，唐朝提前衰落。",
+      "counterfactualExplanation": "若双方都采取极端手段且无人让步，可能引发全面内战。",
+      "endingNarration": [
+        {
+          "id": "ending_3_text",
+          "type": "endingNarration",
+          "speakerName": "旁白",
+          "text": "玄武门前，兄弟三人皆倒在血泊之中。长安城内，各方势力蠢蠢欲动。北方突厥铁骑已至边境，大唐的盛世，还未开始便已终结。"
+        }
+      ],
+      "backgroundImage": ""
+    }
+  ]
+}
